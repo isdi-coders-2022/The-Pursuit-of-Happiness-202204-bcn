@@ -1,9 +1,9 @@
-import Navbar from "./components/Navbar/Navbar";
+import Navbar from "./components/NavbarComponent/NavbarComponent";
 
 function App() {
   return (
     <>
-      <Navbar />
+      <Navbar homeText="Home" favText="Favorites" />
     </>
   );
 }

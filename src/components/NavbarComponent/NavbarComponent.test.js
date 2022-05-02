@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import Navbar from "./Navbar";
+import Navbar from "./NavbarComponent";
 
 describe("Given Navbar function", () => {
   describe("When it's called with to word given", () => {
