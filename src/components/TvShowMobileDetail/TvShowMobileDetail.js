@@ -1,7 +1,7 @@
 const TvShowMobileDetail = (props) => {
   return (
     <>
-      <div alt="TvShowDetail" className="TvShowMobileDetail__container">
+      <div className="TvShowMobileDetail__container">
         <div className="TvShowMobileDetail__poster">
           <img src={props.posterURL} alt={props.name} />
           <p>{props.name}</p>
