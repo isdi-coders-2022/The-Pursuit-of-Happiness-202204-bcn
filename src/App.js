@@ -1,9 +1,9 @@
-import Navbar from "./components/NavbarComponent/NavbarComponent";
+import Header from "./components/HeaderComponent/HeaderComponent";
 
 function App() {
   return (
     <>
-      <Navbar homeText="Home" favText="Favorites" />
+      <Header />
     </>
   );
 }
