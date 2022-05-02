@@ -20,6 +20,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "testcoverage": "test --coverage --watchAll",
     "eject": "react-scripts eject",
     "prepare": "husky install"
   },
