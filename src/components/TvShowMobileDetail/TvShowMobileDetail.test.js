@@ -7,18 +7,14 @@ describe("Given a component TvShowMobileDetail", () => {
       render(
         <TvShowMobileDetail
           name="Stars Wars"
-          year="2020"
-          rating="10.0"
-          genre="Acción"
           posterURL="url"
+          rating="10.0"
+          year="2020"
+          genre="Acción"
         />
       );
-
       const linkElement = screen.getByText("Stars Wars");
       expect(linkElement).toBeInTheDocument();
-      // findAllByText;
-      // expect(linkElement).toHaveTextContent("Stars War");
-      // expect(screen.getByText("Stars War")).toBeInTheDocument();
     });
   });
 });
