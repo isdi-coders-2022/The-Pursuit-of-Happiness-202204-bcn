@@ -13,7 +13,7 @@ const StarRating = ({ rating }) => {
   return (
     <StyledStarRatingComponent>
       <FontAwesomeIcon data-testid className="star" icon={faStar} />
-      <p>prueba</p>
+      <p>{rating}</p>
     </StyledStarRatingComponent>
   );
 };
