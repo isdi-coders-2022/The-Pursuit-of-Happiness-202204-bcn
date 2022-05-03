@@ -1,4 +1,4 @@
-import Navbar from "../NavbarComponent/NavbarComponent";
+import Navbar from "../Navbar/Navbar";
 import styled from "styled-components";
 import Dropdown from "../Dropdown/Dropdown";
 
