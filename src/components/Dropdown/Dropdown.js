@@ -1,14 +1,12 @@
-import Select from "react-select";
-
-const genres = [
-  { value: "Action", label: "Action" },
-  { value: "Drama", label: "Drama" },
-  { value: "Comedy", label: "Comedy" },
-  { value: "Horror", label: "Horror" },
-];
-
-const Dropdown = () => {
-  return <Select defaultValue={genres[0]} options={genres} />;
+const Dropdown = ({ genres }) => {
+  return (
+    <form action="genres">
+      <label htmlFor="genres">Genres: </label>
+      <select name="genre" id="genre">
+        <option value={genres[0]}>{genres[0]}</option>
+      </select>
+    </form>
+  );
 };
 
 export default Dropdown;

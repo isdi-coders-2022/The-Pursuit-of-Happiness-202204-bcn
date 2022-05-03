@@ -1,6 +1,7 @@
 import Navbar from "../Navbar/Navbar";
 import styled from "styled-components";
 import Dropdown from "../Dropdown/Dropdown";
+import genresList from "../Dropdown/genresList";
 
 const StyledHeaderComponent = styled.div`
   color: white;
@@ -18,7 +19,7 @@ const Header = () => {
         WAS<span className="logoSign">!</span>
       </h1>
       <Navbar homeText="Home" favText="Favorites" />
-      <Dropdown />
+      <Dropdown genres={genresList} />
     </StyledHeaderComponent>
   );
 };
