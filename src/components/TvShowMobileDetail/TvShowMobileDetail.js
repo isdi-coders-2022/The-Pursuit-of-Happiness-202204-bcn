@@ -1,17 +1,18 @@
-const TvShowMobileDetail = (props) => {
+const TvShowMobileDetail = ({ name, year, rating, genre, posterURL }) => {
   return (
     <>
-      <div className="TvShowMobileDetail__container">
-        <div className="TvShowMobileDetail__poster">
-          <img src={props.posterURL} alt={props.name} />
-          <p>{props.name}</p>
+      <div className="tvShowMobileDetail__container">
+        <div className="tvShowMobileDetail__poster">
+          <img src={posterURL} alt={name} />
+          <p>{name}</p>
+          <p>{year}</p>
         </div>
-        <div className="TvShowMobileDetail_content">
+        <div className="tvShowMobileDetail_content">
           <img src="img/star.png" alt="Rating star" />
-          <p>{props.rating}</p>
-          <p>{props.year}</p>
-          <p>{props.genre}</p>
         </div>
+        <i />
+        <p>{genre}</p>
+        <p>{rating}</p>
       </div>
     </>
   );
