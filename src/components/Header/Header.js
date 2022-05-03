@@ -6,8 +6,8 @@ const genresList = ["Action", "Drama", "Comedy", "Horror"];
 
 const StyledHeaderComponent = styled.div`
   color: white;
-  display: flex;
 
+  align-items: baseline;
   .logoSign {
     color: rgba(226, 182, 22, 1);
   }
@@ -15,12 +15,14 @@ const StyledHeaderComponent = styled.div`
 
 const Header = () => {
   return (
-    <StyledHeaderComponent>
-      <h1>
+    <StyledHeaderComponent className="row">
+      <h1 className="text-center gy-3 col-4">
         WAS<span className="logoSign">!</span>
       </h1>
-      <Navbar homeText="Home" favText="Favorites" />
-      <Dropdown genres={genresList} />
+      <Navbar className="col-8" homeText="Home" favText="Favorites" />
+      <div className="d-flex flex-row-reverse">
+        <Dropdown genres={genresList} />
+      </div>
     </StyledHeaderComponent>
   );
 };

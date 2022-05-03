@@ -9,11 +9,11 @@ const StyledNavbarComponenent = styled.div`
   }
 `;
 
-const Navbar = ({ homeText, favText, className }) => {
+const Navbar = ({ homeText, favText }) => {
   return (
-    <StyledNavbarComponenent>
-      <h2 className={className}>{homeText}</h2>
-      <h2 className={className}>{favText}</h2>
+    <StyledNavbarComponenent className="col-8">
+      <h2 className="col-6">{homeText}</h2>
+      <h2 className="col-6">{favText}</h2>
     </StyledNavbarComponenent>
   );
 };
