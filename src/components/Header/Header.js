@@ -1,7 +1,8 @@
 import Navbar from "../Navbar/Navbar";
 import styled from "styled-components";
 import Dropdown from "../Dropdown/Dropdown";
-import genresList from "../Dropdown/genresList";
+
+const genresList = ["Action", "Drama", "Comedy", "Horror"];
 
 const StyledHeaderComponent = styled.div`
   color: white;
