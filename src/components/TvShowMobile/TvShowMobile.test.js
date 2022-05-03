@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import TvShowMobileDetail from "./TvShowMobileDetail";
+import TvShowMobileDetail from "./TvShowMobile";
 
 describe("Given a component TvShowMobileDetail", () => {
   describe("When it receives name=Stars Wars posterURL=url rating=10.0 year=2020 genre=Acción", () => {
