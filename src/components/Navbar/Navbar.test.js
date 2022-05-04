@@ -1,4 +1,5 @@
 import { render, screen } from "@testing-library/react";
+import { BrowserRouter } from "react-router-dom";
 import Navbar from "./Navbar";
 
 describe("Given Navbar function", () => {
@@ -7,7 +8,11 @@ describe("Given Navbar function", () => {
       const textHome = "Home";
       const textFavorites = "Favorites";
 
-      render(<Navbar homeText={textHome} favText={textFavorites} />);
+      render(
+        <BrowserRouter>
+          <Navbar homeText={textHome} favText={textFavorites} />
+        </BrowserRouter>
+      );
 
       const expectedNavbarText = screen.getAllByRole("heading");
 
