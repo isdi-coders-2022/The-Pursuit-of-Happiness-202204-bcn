@@ -12,7 +12,7 @@ const StyledArrowComponent = styled.div`
   }
 `;
 
-const ArrowLeft = () => {
+const ArrowButton = () => {
   return (
     <StyledArrowComponent>
       <FontAwesomeIcon
@@ -24,4 +24,4 @@ const ArrowLeft = () => {
   );
 };
 
-export default ArrowLeft;
+export default ArrowButton;
