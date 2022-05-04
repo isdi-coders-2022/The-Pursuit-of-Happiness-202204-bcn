@@ -1,19 +1,24 @@
-import Header from "./components/Header/Header";
-import styled from "styled-components";
-import Footer from "./components/Footer/Footer";
+import { Navigate, Route, Routes } from "react-router-dom";
+import FavsPage from "./pages/FavsPage";
+import HomePage from "./pages/HomePage";
+import ShowsProvider from "./store/context/ShowsProvider";
 
-const StyledMainContainerComponent = styled.div`
-  border: 2px solid red;
-  height: 100vh;
-`;
+// import Navigation from "./components/Navigation/Navigation";
+// import ListPage from "./pages/KittenListPage/KittenListPage";
+// import DetailsPage from "./pages/KittyDetailsPage/KittyDetailsPage";
+// import NewPage from "./pages/NewKittyPage/NewKittyPage";
+// import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
 
 function App() {
   return (
     <>
-      <StyledMainContainerComponent className="container">
-        <Header />
-        <Footer />
-      </StyledMainContainerComponent>
+      <ShowsProvider>
+        <Routes>
+          <Route path="/" element={<Navigate to="/HomePage" />} />
+          <Route path="/HomePage" element={<HomePage />} />
+          <Route path="/FavsPage" element={<FavsPage />} />
+        </Routes>
+      </ShowsProvider>
     </>
   );
 }
