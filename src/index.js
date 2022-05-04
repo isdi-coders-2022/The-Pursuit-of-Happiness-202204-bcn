@@ -5,6 +5,14 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import ShowsProvider from "./store/context/ShowsProvider";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { setupWorker, rest } from "msw";
+
+const worker = setupWorker(
+  rest.get("https://api.tvmaze.com/shows", (req, res, ctx) => {
+    return res(ctx.json({ firstName: "John" }));
+  })
+);
+worker.start();
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
