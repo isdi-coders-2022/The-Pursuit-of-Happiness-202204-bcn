@@ -1,8 +1,6 @@
 import Navbar from "../Navbar/Navbar";
 import styled from "styled-components";
 import Dropdown from "../Dropdown/Dropdown";
-import { useContext } from "react";
-import ShowsContext from "../../store/context/ShowsContext";
 
 const genresList = ["Action", "Drama", "Comedy", "Horror"];
 
@@ -16,11 +14,8 @@ const StyledHeaderComponent = styled.div`
 `;
 
 const Header = () => {
-  const { arrayTest, setNewArray } = useContext(ShowsContext);
-
   return (
     <StyledHeaderComponent className="row">
-      <div onClick={setNewArray}>{arrayTest}</div>
       <h1 className="text-center gy-3 col-4">
         WAS<span className="logoSign">!</span>
       </h1>
