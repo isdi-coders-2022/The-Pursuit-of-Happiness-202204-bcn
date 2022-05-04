@@ -1,4 +1,4 @@
-import initialShowLoad from "./showListActionTypes";
+import initialShowLoad from "../showListActionTypes";
 
 export const showShowsList = (shows) => ({
   type: initialShowLoad,

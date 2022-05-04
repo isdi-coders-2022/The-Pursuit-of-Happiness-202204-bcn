@@ -4,8 +4,8 @@ import ShowsContext from "./ShowsContext";
 const ShowsProvider = ({ children }) => {
   const [arrayTest, setArrayTest] = useState([1, 2, 3, 4, 5, 6, 7]);
 
-  const setNewArray = (newNumber) => {
-    setArrayTest([...arrayTest, newNumber]);
+  const setNewArray = () => {
+    setArrayTest([...arrayTest, 2]);
   };
   return (
     <ShowsContext.Provider value={{ arrayTest, setNewArray }}>
