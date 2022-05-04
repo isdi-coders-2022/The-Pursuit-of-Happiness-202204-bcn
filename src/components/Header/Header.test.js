@@ -1,5 +1,9 @@
 import { render, screen } from "@testing-library/react";
+<<<<<<< HEAD
 
+=======
+import { BrowserRouter } from "react-router-dom";
+>>>>>>> main
 import Header from "./Header";
 
 describe("Given a Header component", () => {
@@ -7,7 +11,11 @@ describe("Given a Header component", () => {
     test("Then it should render a heading with the text 'WAS!'", () => {
       const expectedText = "WAS!";
 
-      render(<Header />);
+      render(
+        <BrowserRouter>
+          <Header />
+        </BrowserRouter>
+      );
       const expectedRenderedHeading = screen.getByRole("heading", { level: 1 });
 
       expect(expectedRenderedHeading).toHaveTextContent(expectedText);
