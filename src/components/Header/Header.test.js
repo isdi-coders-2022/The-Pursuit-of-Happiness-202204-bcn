@@ -1,9 +1,6 @@
 import { render, screen } from "@testing-library/react";
-<<<<<<< HEAD
-
-=======
 import { BrowserRouter } from "react-router-dom";
->>>>>>> main
+
 import Header from "./Header";
 
 describe("Given a Header component", () => {
