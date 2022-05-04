@@ -2,9 +2,12 @@ import styled from "styled-components";
 
 const StyledDropdownComponent = styled.div`
   border: 1px solid grey;
-  padding-left: 4px;
-  padding-right: 4px;
+  padding-left: 15px;
+  padding-right: 15px;
   border-radius: 16px;
+  select {
+    border: none;
+  }
 
   .selectGenre {
     color: white;
