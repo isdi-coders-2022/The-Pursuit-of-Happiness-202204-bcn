@@ -6,7 +6,7 @@ const genresList = ["Action", "Drama", "Comedy", "Horror"];
 
 const StyledHeaderComponent = styled.div`
   color: white;
-
+  height: 15vh;
   align-items: baseline;
   .logoSign {
     color: rgba(226, 182, 22, 1);

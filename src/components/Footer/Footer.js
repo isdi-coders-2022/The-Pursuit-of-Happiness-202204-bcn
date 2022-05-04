@@ -1,14 +1,17 @@
 import styled from "styled-components";
-import ArrowButton from "../ArrowButton/ArrowButton";
+import ArrowButtonLeft from "../ArrowButton/ArrowButtonLeft";
+import ArrowButtonRight from "../ArrowButtonRight/ArrowButonRight";
 
 const StyledFooterComponent = styled.div`
   border: 2px solid red;
+  height: 10vh;
 `;
 
 const Footer = () => {
   return (
     <StyledFooterComponent className="fixed-bottom">
-      <ArrowButton />
+      <ArrowButtonLeft />
+      <ArrowButtonRight />
     </StyledFooterComponent>
   );
 };
