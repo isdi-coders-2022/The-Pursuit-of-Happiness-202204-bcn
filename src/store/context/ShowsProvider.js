@@ -12,6 +12,7 @@ const ShowsProvider = ({ children }) => {
     (async () => {
       const fetchedShows = await fetch("https://api.tvmaze.com/shows/1");
       let response = await fetchedShows.json();
+
       showsDispatch(loadShows(response));
     })();
   }, []);

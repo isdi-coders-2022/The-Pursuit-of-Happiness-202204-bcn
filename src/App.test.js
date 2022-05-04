@@ -1,5 +1,3 @@
-// import { toHaveTextContent } from "@testing-library/jest-dom/dist/matchers";
-// import { render, screen, whitin } from "@testing-library/react";
 import { render, screen } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
 import App from "./App";

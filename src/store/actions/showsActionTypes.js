@@ -1,5 +1,3 @@
-const actionTypes = {
-  loadShows: "load-shows",
-};
+const loadShows = "load-shows";
 
-export default actionTypes;
+export default loadShows;
