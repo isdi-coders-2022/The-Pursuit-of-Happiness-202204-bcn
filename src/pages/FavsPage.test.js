@@ -1,16 +1,15 @@
 import { render, screen } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
+import FavsPage from "./FavsPage";
 
-import Header from "./Header";
-
-describe("Given a Header component", () => {
+describe("Given a FavsPage component", () => {
   describe("When it's called", () => {
     test("Then it should render a heading with the text 'WAS!'", () => {
       const expectedText = "WAS!";
 
       render(
         <BrowserRouter>
-          <Header />
+          <FavsPage />
         </BrowserRouter>
       );
       const expectedRenderedHeading = screen.getByRole("heading", { level: 1 });
