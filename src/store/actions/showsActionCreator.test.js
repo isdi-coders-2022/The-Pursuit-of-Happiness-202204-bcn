@@ -1,60 +1,14 @@
-import {
-  editShow,
-  addShowToFav,
-  initialShowLoad,
-  createNewShow,
-} from "./showsActionCreator";
-import actionTypes from "./showsActionTypes";
+import { loadShows } from "./showsActionCreator";
 
 describe("Given a initialShowLoad function", () => {
-  describe("When it's called", () => {
-    test("Then it should return an object", () => {
-      const expectedResult = {
-        type: actionTypes.initialShowLoad,
-      };
+  describe("When it's called and given an array of numbers [1,2,3]", () => {
+    test("Then it should return an object with the array [1,2,3] as payload property", () => {
+      const initialPayload = [1, 2, 3];
+      const expectedProperty = [1, 2, 3];
 
-      const receivedResult = initialShowLoad();
+      const testAction = loadShows(initialPayload);
 
-      expect(receivedResult).toEqual(expectedResult);
-    });
-  });
-});
-describe("Given a editShow function", () => {
-  describe("When it's called", () => {
-    test("Then it should return an object", () => {
-      const expectedResult = {
-        type: actionTypes.editShow,
-      };
-
-      const receivedResult = editShow();
-
-      expect(receivedResult).toEqual(expectedResult);
-    });
-  });
-});
-describe("Given a addShowToFav function", () => {
-  describe("When it's called", () => {
-    test("Then it should return an object", () => {
-      const expectedResult = {
-        type: actionTypes.addShowToFav,
-      };
-
-      const receivedResult = addShowToFav();
-
-      expect(receivedResult).toEqual(expectedResult);
-    });
-  });
-});
-describe("Given a createNewShow function", () => {
-  describe("When it's called", () => {
-    test("Then it should return an object", () => {
-      const expectedResult = {
-        type: actionTypes.createNewShow,
-      };
-
-      const receivedResult = createNewShow();
-
-      expect(receivedResult).toEqual(expectedResult);
+      expect(testAction.payload).toStrictEqual(expectedProperty);
     });
   });
 });
