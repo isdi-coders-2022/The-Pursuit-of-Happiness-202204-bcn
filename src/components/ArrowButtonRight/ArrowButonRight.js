@@ -1,10 +1,10 @@
-import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styled from "styled-components";
 
 const StyledArrowComponent = styled.div`
   color: rgba(226, 182, 22, 1);
-  .arrowLeft {
+  .arrowRight {
     background-color: rgb(58, 63, 71, 1);
     padding: 4px;
     border-radius: 4px;
@@ -12,16 +12,16 @@ const StyledArrowComponent = styled.div`
   }
 `;
 
-const ArrowButton = () => {
+const ArrowButtonRight = () => {
   return (
     <StyledArrowComponent>
       <FontAwesomeIcon
-        data-testid="arrowLeftTestId"
-        className="arrowLeft"
-        icon={faArrowLeft}
+        data-testid="arrowRightTestId"
+        className="arrowRight"
+        icon={faArrowRight}
       />
     </StyledArrowComponent>
   );
 };
 
-export default ArrowButton;
+export default ArrowButtonRight;

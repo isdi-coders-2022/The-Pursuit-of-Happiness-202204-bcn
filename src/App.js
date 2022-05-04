@@ -3,12 +3,6 @@ import FavsPage from "./pages/FavsPage";
 import HomePage from "./pages/HomePage";
 import ShowsProvider from "./store/context/ShowsProvider";
 
-// import Navigation from "./components/Navigation/Navigation";
-// import ListPage from "./pages/KittenListPage/KittenListPage";
-// import DetailsPage from "./pages/KittyDetailsPage/KittyDetailsPage";
-// import NewPage from "./pages/NewKittyPage/NewKittyPage";
-// import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
-
 function App() {
   return (
     <>
