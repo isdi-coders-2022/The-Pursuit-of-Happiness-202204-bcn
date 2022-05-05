@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Given Navbar function When it's called with to word given Then it should always match for this snapshot 1`] = `
+<div
+  className="sc-bczRLJ evcdSO col-8"
+>
+  <a
+    className=""
+    href="/HomePage"
+    onClick={[Function]}
+  >
+    <h2
+      className="col-6"
+    />
+  </a>
+  <a
+    className=""
+    href="/FavsPage"
+    onClick={[Function]}
+  >
+    <h2
+      className="col-6"
+    />
+  </a>
+</div>
+`;

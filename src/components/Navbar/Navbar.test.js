@@ -1,6 +1,7 @@
-import { render, screen } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
+import TestRenderer from "react-test-renderer";
 import Navbar from "./Navbar";
+import { render, screen } from "@testing-library/react";
 
 describe("Given Navbar function", () => {
   describe("When it's called with to word given", () => {
@@ -17,6 +18,15 @@ describe("Given Navbar function", () => {
       const expectedNavbarText = screen.getAllByRole("heading");
 
       expect(expectedNavbarText).toHaveLength(2);
+    });
+    test("Then it should always match for this snapshot", () => {
+      const navbar = TestRenderer.create(
+        <BrowserRouter>
+          <Navbar />
+        </BrowserRouter>
+      );
+
+      expect(navbar).toMatchSnapshot();
     });
   });
 });
