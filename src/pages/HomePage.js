@@ -18,6 +18,7 @@ const HomePage = () => {
     (async () => {
       const response = await fetch("https://api.tvmaze.com/shows");
       const showsData = await response.json();
+
       dispatch(showLoader(showsData));
     })();
   }, [dispatch]);

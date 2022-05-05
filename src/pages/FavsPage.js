@@ -17,8 +17,9 @@ const FavsPage = () => {
 
   useEffect(() => {
     (async () => {
-      const response = await fetch("https://tvshows-api.onrender.com/tvshow");
+      const response = await fetch("https://tvshows-api.onrender.com/tvshow/");
       const showsData = await response.json();
+
       dispatch(favLoader(showsData));
     })();
   }, [dispatch]);
