@@ -5,10 +5,7 @@ import styled from "styled-components";
 const StyledBookmarkComponent = styled.div`
   color: rgba(226, 182, 22, 1);
   .bookmarkIcon {
-    background-color: rgb(58, 63, 71, 1);
-    padding: 4px;
-    border-radius: 4px;
-    font-size: 30px;
+    font-size: 40px;
   }
 `;
 
