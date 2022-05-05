@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import ArrowButtonRight from "./ArrowButonRight";
+import ArrowButtonRight from "./ArrowButtonRight";
 
 describe("Given ArrowButton component", () => {
   describe("When it's called", () => {
