@@ -1,5 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
+import ShowsProvider from "../store/context/ShowsProvider";
 import HomePage from "./HomePage";
 
 describe("Given a HomePage component", () => {
@@ -8,9 +9,11 @@ describe("Given a HomePage component", () => {
       const expectedText = "WAS!";
 
       render(
-        <BrowserRouter>
-          <HomePage />
-        </BrowserRouter>
+        <ShowsProvider>
+          <BrowserRouter>
+            <HomePage />
+          </BrowserRouter>
+        </ShowsProvider>
       );
       const expectedRenderedHeading = screen.getByRole("heading", { level: 1 });
 
