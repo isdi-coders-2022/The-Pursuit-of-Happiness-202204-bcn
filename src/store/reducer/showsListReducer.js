@@ -1,19 +1,29 @@
-import { loadShows, newShow } from "../actions/showsActionTypes";
+import {
+  loadFavShows,
+  loadShows,
+  newShowToAdd,
+} from "../actions/showsActionTypes";
 
 const showListReducer = (shows, action) => {
-  let newArray;
+  let newShow;
 
   switch (action.type) {
     case loadShows:
-      newArray = shows;
+      newShow = [...action.shows];
+
       break;
-    case newShow:
-      newArray = [...shows, action.shows];
+    case loadFavShows:
+      newShow = [...action.shows];
+
+      break;
+    case newShowToAdd:
+      newShow = [...shows, action.shows];
       break;
     default:
-      newArray = [...shows];
+      newShow = [...shows];
   }
-  return newArray;
+
+  return newShow;
 };
 
 export default showListReducer;
