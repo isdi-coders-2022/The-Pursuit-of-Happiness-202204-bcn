@@ -1,49 +1,6 @@
-import showsReducer from "./showsReducer";
+import showListReducer from "./showsListReducer";
 
-describe("Given the showsReducer", () => {
-  describe("When it receive a group of three shows and action loadShows", () => {
-    test("Then it should return a new group equals to the given one", () => {
-      const shows = [
-        {
-          id: 1,
-          name: "Los Soprano",
-        },
-        {
-          id: 2,
-          name: "Ozark",
-        },
-        {
-          id: 3,
-          name: "Z",
-        },
-      ];
-
-      const action = {
-        type: "load-shows",
-        shows,
-      };
-
-      const expectedResult = [
-        {
-          id: 1,
-          name: "Los Soprano",
-        },
-        {
-          id: 2,
-          name: "Ozark",
-        },
-        {
-          id: 3,
-          name: "Z",
-        },
-      ];
-
-      const showsLoaded = showsReducer(shows, action);
-
-      expect(showsLoaded).toEqual(expectedResult);
-    });
-  });
-
+describe("Given the showListReducer", () => {
   describe("When it receive a group of three shows and no action", () => {
     test("Then it Whould return a new group equals to the given one", () => {
       const thisShows = [
@@ -66,22 +23,22 @@ describe("Given the showsReducer", () => {
         thisShows,
       };
 
-      const expectedResult = [
-        {
+      const expectedResult = {
+        0: {
           id: 1,
           name: "Los Soprano",
         },
-        {
+        1: {
           id: 2,
           name: "Ozark",
         },
-        {
+        2: {
           id: 3,
           name: "Z",
         },
-      ];
+      };
 
-      const showsLoaded = showsReducer(thisShows, action);
+      const showsLoaded = showListReducer(thisShows, action);
 
       expect(showsLoaded).toEqual(expectedResult);
     });
