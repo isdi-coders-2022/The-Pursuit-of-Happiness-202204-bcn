@@ -1,3 +1,1 @@
-const loadShows = "load-shows";
-
-export default loadShows;
+export const loadShows = "load-shows";
