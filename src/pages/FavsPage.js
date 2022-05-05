@@ -28,7 +28,7 @@ const FavsPage = () => {
     <>
       <StyledMainContainerComponent className="container">
         <Header />
-        <ShowContainer state={state} className="w-100" />
+        <ShowContainer pageKey={"fav"} state={state} className="w-100" />
         <FormCreate />
         <Footer />
       </StyledMainContainerComponent>

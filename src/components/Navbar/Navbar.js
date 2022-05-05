@@ -4,6 +4,7 @@ import styled from "styled-components";
 const StyledNavbarComponenent = styled.div`
   color: black;
   display: flex;
+  justify-content: space-around;
   h2 {
     font-size: 22px;
     color: white;
