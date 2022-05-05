@@ -1,17 +1,19 @@
-import { loadShows } from "../actions/showsActionTypes";
+import { loadShows, newShow } from "../actions/showsActionTypes";
 
 const showListReducer = (shows, action) => {
-  let newShow;
+  let newArray;
 
   switch (action.type) {
     case loadShows:
-      newShow = [...action.payload];
+      newArray = shows;
       break;
-
+    case newShow:
+      newArray = [...shows, action.shows];
+      break;
     default:
-      newShow = { ...shows };
+      newArray = [...shows];
   }
-  return newShow;
+  return newArray;
 };
 
 export default showListReducer;

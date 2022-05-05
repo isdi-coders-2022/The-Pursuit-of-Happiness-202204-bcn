@@ -8,7 +8,7 @@ describe("Given a initialShowLoad function", () => {
 
       const testAction = showLoader(initialPayload);
 
-      expect(testAction.payload).toStrictEqual(expectedProperty);
+      expect(testAction.shows).toStrictEqual(expectedProperty);
     });
   });
 });
