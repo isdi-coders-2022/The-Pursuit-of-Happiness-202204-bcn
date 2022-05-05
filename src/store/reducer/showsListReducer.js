@@ -5,7 +5,7 @@ const showListReducer = (shows, action) => {
 
   switch (action.type) {
     case loadShows:
-      newArray = shows;
+      newArray = [...shows];
       break;
     case newShow:
       newArray = [...shows, action.shows];

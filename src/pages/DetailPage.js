@@ -1,23 +1,26 @@
 import styled from "styled-components";
 import Footer from "../components/Footer/Footer";
-import FormCreate from "../components/FormCreate/FormCreate";
+
 import Header from "../components/Header/Header";
+import Navbar from "../components/Navbar/Navbar";
+import TvShowDetail from "../components/TvShowDetail/TvShowDetail";
 
 const StyledMainContainerComponent = styled.div`
   border: 2px solid red;
   height: 100vh;
 `;
 
-const FavsPage = () => {
+const DetailPage = () => {
   return (
     <>
       <StyledMainContainerComponent className="container">
         <Header />
-        <FormCreate />
+        <Navbar />
+        <TvShowDetail />
         <Footer />
       </StyledMainContainerComponent>
     </>
   );
 };
 
-export default FavsPage;
+export default DetailPage;
