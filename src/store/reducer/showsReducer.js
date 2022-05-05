@@ -9,7 +9,7 @@ const showListReducer = (shows, action) => {
       break;
 
     default:
-      newShow = [...action.shows];
+      newShow = [...shows];
   }
   return newShow;
 };
