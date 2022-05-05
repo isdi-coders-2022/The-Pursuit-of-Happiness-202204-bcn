@@ -8,6 +8,7 @@ const StyledDropdownComponent = styled.div`
 
   .selectGenre {
     color: white;
+    border: 0;
   }
 `;
 
