@@ -19,13 +19,13 @@ describe("Given Navbar function", () => {
 
       expect(expectedNavbarText).toHaveLength(2);
     });
-    test("Then it should always match for this snapshot", () => {
-      const navbar = TestRenderer.create(
-        <BrowserRouter>
-          <Navbar />
-        </BrowserRouter>
-      );
-      expect(navbar).toMatchSnapshot();
-    });
+  });
+  test("Then it should always match for this snapshot", () => {
+    const navbarReceived = TestRenderer.create(
+      <BrowserRouter>
+        <Navbar />
+      </BrowserRouter>
+    );
+    expect(navbarReceived).toMatchSnapshot();
   });
 });
