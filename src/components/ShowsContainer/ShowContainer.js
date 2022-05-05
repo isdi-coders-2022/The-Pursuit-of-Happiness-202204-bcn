@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { showLoader } from "../../store/actions/showsActionCreator";
 
 import ShowsContext from "../../store/context/ShowsContext";
+import TvShowMobile from "../TvShowMobile/TvShowMobile";
 
 const StyledShowsComponent = styled.div`
   border: 2px solid yellow;
@@ -16,7 +17,7 @@ const ShowContainer = () => {
 
   useEffect(() => {
     (async () => {
-      const response = await fetch("https://api.tvmaze.com/shows/1");
+      const response = await fetch("https://api.tvmaze.com/shows");
       const showsData = await response.json();
 
       dispatch(showLoader(showsData));
@@ -25,7 +26,15 @@ const ShowContainer = () => {
 
   return (
     <StyledShowsComponent>
-      <div>{state.id}</div>
+      {state.map((show) => (
+        <TvShowMobile
+          name={show.name}
+          posterURL={show.image.medium}
+          year={show.premiered}
+          genre={show.genres[0]}
+          rating={show.rating.average}
+        ></TvShowMobile>
+      ))}
     </StyledShowsComponent>
   );
 };
