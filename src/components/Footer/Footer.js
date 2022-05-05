@@ -3,8 +3,8 @@ import ArrowButtonLeft from "../ArrowButton/ArrowButtonLeft";
 import ArrowButtonRight from "../ArrowButtonRight/ArrowButtonRight";
 
 const StyledFooterComponent = styled.div`
-  border: 2px solid red;
   height: 10vh;
+  visibility: hidden;
 `;
 
 const Footer = () => {
