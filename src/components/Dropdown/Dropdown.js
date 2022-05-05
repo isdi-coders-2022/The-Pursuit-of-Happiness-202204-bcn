@@ -7,7 +7,7 @@ const StyledDropdownComponent = styled.div`
   border-radius: 16px;
 
   .selectGenre {
-    color: bla;
+    color: white;
     border: 0;
   }
 `;
