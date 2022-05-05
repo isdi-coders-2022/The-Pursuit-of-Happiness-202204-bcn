@@ -4,8 +4,9 @@ import styled from "styled-components";
 
 const StyledStarRatingComponent = styled.div`
   color: rgba(226, 182, 22, 1);
+  text-align: center;
   .star {
-    font-size: 22px;
+    font-size: 30px;
   }
 `;
 
