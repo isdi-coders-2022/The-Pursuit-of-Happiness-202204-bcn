@@ -5,7 +5,7 @@ const StyledFormCreateComponent = styled.div`
   align-items: center;
   font-size: 18px;
   position: relative;
-  bottom: -300%;
+  bottom: -240%;
   form {
     display: flex;
     flex-direction: column;
