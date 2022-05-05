@@ -12,10 +12,10 @@ const StyledBookmarkComponent = styled.div`
   }
 `;
 
-const BookmarkIcon = () => {
+const BookmarkIcon = (showId) => {
   return (
     <StyledBookmarkComponent>
-      <FontAwesomeIcon icon={faBookmark} className="bookmarkIcon" />
+      <FontAwesomeIcon id={showId} icon={faBookmark} className="bookmarkIcon" />
     </StyledBookmarkComponent>
   );
 };

@@ -1,13 +1,22 @@
 import styled from "styled-components";
 import StarRating from "../StarRating/StarRating";
-import BookmarkIcon from "../BookmarkIcon/BookmarIcon";
 
 const StyledShowComponent = styled.div`
   color: white;
   display: flex;
+
+  .tvShowMobileDetail__container {
+    height: 378px;
+    padding: 20px;
+    border: 2px solid white;
+    width: 100%;
+  }
+  .tvShowMobileDetail__poster {
+    height: 100%;
+  }
 `;
 
-const TvShowMobile = ({ name, year, rating, genre, posterURL, showId }) => {
+const TvShowDetail = ({ name, year, rating, genre, posterURL }) => {
   return (
     <>
       <StyledShowComponent>
@@ -17,16 +26,14 @@ const TvShowMobile = ({ name, year, rating, genre, posterURL, showId }) => {
             <p>{name}</p>
             <p>{year}</p>
           </div>
-          <BookmarkIcon id={showId}></BookmarkIcon>
           <div className="tvShowMobileDetail_content">
             <StarRating rating={rating}></StarRating>
           </div>
           <p>{genre}</p>
         </div>
-        <div></div>
       </StyledShowComponent>
     </>
   );
 };
 
-export default TvShowMobile;
+export default TvShowDetail;

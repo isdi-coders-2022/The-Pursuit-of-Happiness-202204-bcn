@@ -7,7 +7,6 @@ import ShowsContext from "../store/context/ShowsContext";
 import { showLoader } from "../store/actions/showsActionCreator";
 
 const StyledMainContainerComponent = styled.div`
-  border: 2px solid red;
   height: 100vh;
   margin: 0;
 `;
