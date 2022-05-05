@@ -8,30 +8,38 @@ const StyledShowComponent = styled.div`
   margin-top: 20px;
   font-size: 20px;
 
+  img {
+    border-radius: 45px;
+    border: 2px solid;
+  }
   .title {
     margin-top: 10px;
     font-size: 26px;
     font-weight: 600;
+    width: 200px;
   }
   .year {
-    margin-top: -10px;
+    position: relative;
+    left: 125%;
+    top: -24%;
   }
   .tvShowMobil__container {
     display: flex;
     flex-direction: row;
-    width: 200px;
+    width: 210px;
   }
   .tvShowMobile__block1 {
     align-items: flex-end;
     width: 200px;
     margin-right: 60px;
+    width: 190px;
   }
   .tvShowMobile__block2 {
     width: 110px;
     display: flex;
   }
   .tvShowMobile__block3 {
-    margin-top: 270px;
+    margin-top: 235px;
     margin-left: 120px;
     align-items: flex-start;
   }
@@ -39,9 +47,13 @@ const StyledShowComponent = styled.div`
     font-size: 18px;
     color: rgba(226, 182, 22, 1);
     display: flex;
+    position: absolute;
+    left: 84%;
   }
   .bookmarkfix {
-    margin-left: 45px;
+    background: none;
+    left: 89%;
+    position: absolute;
   }
 `;
 

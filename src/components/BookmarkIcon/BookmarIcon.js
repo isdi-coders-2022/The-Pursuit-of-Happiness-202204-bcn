@@ -6,6 +6,7 @@ const StyledBookmarkComponent = styled.div`
   color: rgba(226, 182, 22, 1);
   .bookmarkIcon {
     font-size: 40px;
+    background: none;
   }
 `;
 
