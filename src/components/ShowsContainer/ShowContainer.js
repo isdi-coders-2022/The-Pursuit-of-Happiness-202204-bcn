@@ -1,8 +1,4 @@
-import { useContext, useEffect } from "react";
 import styled from "styled-components";
-import { showLoader } from "../../store/actions/showsActionCreator";
-
-import ShowsContext from "../../store/context/ShowsContext";
 import TvShowMobile from "../TvShowMobile/TvShowMobile";
 
 const StyledShowsComponent = styled.div`
@@ -12,22 +8,12 @@ const StyledShowsComponent = styled.div`
   color: white;
 `;
 
-const ShowContainer = () => {
-  const { state, dispatch } = useContext(ShowsContext);
-
-  useEffect(() => {
-    (async () => {
-      const response = await fetch("https://api.tvmaze.com/shows");
-      const showsData = await response.json();
-
-      dispatch(showLoader(showsData));
-    })();
-  }, [dispatch]);
-
+const ShowContainer = ({ state }) => {
   return (
     <StyledShowsComponent>
       {state.map((show) => (
         <TvShowMobile
+          key={show.name}
           name={show.name}
           posterURL={show.image.medium}
           year={show.premiered}
