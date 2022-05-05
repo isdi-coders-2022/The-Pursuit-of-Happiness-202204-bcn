@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import BookmarkIcon from "../BookmarkIcon/BookmarIcon";
 import TvShowMobile from "../TvShowMobile/TvShowMobile";
 
 const StyledShowsComponent = styled.div`
@@ -12,14 +13,17 @@ const ShowContainer = ({ state }) => {
   return (
     <StyledShowsComponent>
       {state.map((show) => (
-        <TvShowMobile
-          key={show.name + show.id}
-          name={show.name}
-          posterURL={show.image.medium}
-          year={show.premiered}
-          genre={show.genres[0]}
-          rating={show.rating.average}
-        ></TvShowMobile>
+        <>
+          <BookmarkIcon id={show.id}></BookmarkIcon>
+          <TvShowMobile
+            key={show.name + show.id}
+            name={show.name}
+            posterURL={show.image.medium}
+            year={show.premiered}
+            genre={show.genres[0]}
+            rating={show.rating.average}
+          ></TvShowMobile>
+        </>
       ))}
     </StyledShowsComponent>
   );
