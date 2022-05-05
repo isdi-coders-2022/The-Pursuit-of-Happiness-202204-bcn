@@ -3,7 +3,6 @@ import styled from "styled-components";
 import TvShowMobile from "../TvShowMobile/TvShowMobile";
 
 const StyledShowsComponent = styled.div`
-  border: 2px solid yellow;
   height: 75vh;
   margin: 0;
   color: white;

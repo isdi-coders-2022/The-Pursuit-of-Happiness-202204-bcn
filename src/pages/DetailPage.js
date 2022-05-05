@@ -6,7 +6,6 @@ import Navbar from "../components/Navbar/Navbar";
 import TvShowDetail from "../components/TvShowDetail/TvShowDetail";
 
 const StyledMainContainerComponent = styled.div`
-  border: 2px solid red;
   height: 100vh;
 `;
 
