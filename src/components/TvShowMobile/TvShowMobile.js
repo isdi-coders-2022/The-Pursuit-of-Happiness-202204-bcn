@@ -1,11 +1,12 @@
 import styled from "styled-components";
+import StarRating from "../StarRating/StarRating";
 
 const StyledShowComponent = styled.div`
   color: white;
   display: flex;
 `;
 
-const TvShowMobileDetail = ({ name, year, rating, genre, posterURL }) => {
+const TvShowMobile = ({ name, year, rating, genre, posterURL }) => {
   return (
     <>
       <StyledShowComponent>
@@ -16,15 +17,13 @@ const TvShowMobileDetail = ({ name, year, rating, genre, posterURL }) => {
             <p>{year}</p>
           </div>
           <div className="tvShowMobileDetail_content">
-            <img src="img/star.png" alt="Rating star" />
+            <StarRating rating={rating}></StarRating>
           </div>
-          <i />
           <p>{genre}</p>
-          <p>{rating}</p>
         </div>
       </StyledShowComponent>
     </>
   );
 };
 
-export default TvShowMobileDetail;
+export default TvShowMobile;
