@@ -30,7 +30,7 @@ const HomePage = () => {
     <StyledMainContainerComponent className="container">
       <Header />
       <div className="row">
-        <ShowContainer state={state} className="w-100" />
+        <ShowContainer pageKey={"home"} state={state} className="w-100" />
       </div>
       <Footer />
     </StyledMainContainerComponent>

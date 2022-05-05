@@ -8,14 +8,14 @@ const StyledShowsComponent = styled.div`
   color: white;
 `;
 
-const ShowContainer = ({ state }) => {
+const ShowContainer = ({ state, pageKey }) => {
   return (
     <StyledShowsComponent>
       {state.map((show) => (
         <>
           <TvShowMobile
             showId={show.id}
-            key={show.name + show.id}
+            key={pageKey + show.id}
             name={show.name}
             posterURL={show.image.medium}
             year={show.premiered}
