@@ -25,7 +25,6 @@ describe("Given Navbar function", () => {
           <Navbar />
         </BrowserRouter>
       );
-
       expect(navbar).toMatchSnapshot();
     });
   });
