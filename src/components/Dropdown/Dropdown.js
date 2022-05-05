@@ -4,10 +4,11 @@ const StyledDropdownComponent = styled.div`
   border: 1px solid grey;
   padding-left: 4px;
   padding-right: 4px;
-  border-radius: 16px;
+  border-radius: 15px;
 
   .selectGenre {
     color: white;
+    border: 0;
   }
 `;
 
