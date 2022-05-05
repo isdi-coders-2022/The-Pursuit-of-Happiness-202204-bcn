@@ -1,2 +1,3 @@
 export const loadShows = "load-shows";
-export const newShow = "new-show";
+export const loadFavShows = "load-fav-shows";
+export const newShowToAdd = "new-show";

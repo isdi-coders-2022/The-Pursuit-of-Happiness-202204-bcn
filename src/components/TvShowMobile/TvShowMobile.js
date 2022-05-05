@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import BookmarkIcon from "../BookmarkIcon/BookmarIcon";
 import StarRating from "../StarRating/StarRating";
 
 const StyledShowComponent = styled.div`
@@ -20,6 +21,9 @@ const TvShowMobile = ({ name, year, rating, genre, posterURL }) => {
             <StarRating rating={rating}></StarRating>
           </div>
           <p>{genre}</p>
+        </div>
+        <div>
+          <BookmarkIcon>asasd</BookmarkIcon>
         </div>
       </StyledShowComponent>
     </>
