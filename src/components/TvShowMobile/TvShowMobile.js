@@ -12,16 +12,25 @@ const StyledShowComponent = styled.div`
     border-radius: 45px;
     border: 2px solid;
   }
+  form {
+    left: 50%;
+    position: absolute;
+    top: 10%;
+  }
   .title {
     margin-top: 10px;
-    font-size: 26px;
+    font-size: 18px;
     font-weight: 600;
-    width: 200px;
+
+    width: 100%;
+    left: 20%;
+    position: relative;
   }
   .year {
+    font-size: 12px;
     position: relative;
-    left: 125%;
-    top: -24%;
+    left: 142%;
+    top: -18%;
   }
   .tvShowMobil__container {
     display: flex;
@@ -30,13 +39,14 @@ const StyledShowComponent = styled.div`
   }
   .tvShowMobile__block1 {
     align-items: flex-end;
-    width: 200px;
+    width: 165px;
     margin-right: 60px;
-    width: 190px;
+    width: 160px;
   }
   .tvShowMobile__block2 {
     width: 110px;
     display: flex;
+    font-size: 16px;
   }
   .tvShowMobile__block3 {
     margin-top: 235px;
@@ -52,7 +62,7 @@ const StyledShowComponent = styled.div`
   }
   .bookmarkfix {
     background: none;
-    left: 89%;
+    left: 72%;
     position: absolute;
   }
 `;
