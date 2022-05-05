@@ -1,4 +1,4 @@
-import { loadShows } from "./showsActionCreator";
+import { showLoader } from "./showsActionCreator";
 
 describe("Given a initialShowLoad function", () => {
   describe("When it's called and given an array of numbers [1,2,3]", () => {
@@ -6,7 +6,7 @@ describe("Given a initialShowLoad function", () => {
       const initialPayload = [1, 2, 3];
       const expectedProperty = [1, 2, 3];
 
-      const testAction = loadShows(initialPayload);
+      const testAction = showLoader(initialPayload);
 
       expect(testAction.payload).toStrictEqual(expectedProperty);
     });

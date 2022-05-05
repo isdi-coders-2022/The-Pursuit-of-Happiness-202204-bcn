@@ -1,6 +1,6 @@
-import actionTypes from "./showsActionTypes";
+import { loadShows } from "./showsActionTypes";
 
-export const loadShows = (shows) => ({
-  type: actionTypes.loadShows,
+export const showLoader = (shows) => ({
+  type: loadShows,
   payload: shows,
 });
