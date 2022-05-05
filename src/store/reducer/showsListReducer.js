@@ -19,6 +19,7 @@ const showListReducer = (shows, action) => {
     case newShowToAdd:
       newShow = [...shows, action.shows];
       break;
+
     default:
       newShow = [...shows];
   }

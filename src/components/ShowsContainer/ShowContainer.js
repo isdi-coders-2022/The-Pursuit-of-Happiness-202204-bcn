@@ -13,7 +13,7 @@ const ShowContainer = ({ state }) => {
     <StyledShowsComponent>
       {state.map((show) => (
         <TvShowMobile
-          key={show.name}
+          key={show.name + show.id}
           name={show.name}
           posterURL={show.image.medium}
           year={show.premiered}
