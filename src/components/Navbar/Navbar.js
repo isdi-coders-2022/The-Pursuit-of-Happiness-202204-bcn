@@ -8,6 +8,9 @@ const StyledNavbarComponenent = styled.div`
     font-size: 22px;
     color: white;
   }
+  a {
+    text-decoration: none;
+  }
 `;
 
 const Navbar = ({ homeText, favText }) => {
