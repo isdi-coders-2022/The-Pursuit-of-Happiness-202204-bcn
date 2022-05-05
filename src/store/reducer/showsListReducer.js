@@ -1,4 +1,5 @@
 import {
+  addToFav,
   loadFavShows,
   loadShows,
   newShowToAdd,
@@ -14,9 +15,11 @@ const showListReducer = (shows, action) => {
       break;
     case loadFavShows:
       newShow = [...action.shows];
-
       break;
     case newShowToAdd:
+      newShow = [...shows, action.shows];
+      break;
+    case addToFav:
       newShow = [...shows, action.shows];
       break;
 
