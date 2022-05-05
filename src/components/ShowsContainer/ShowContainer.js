@@ -1,9 +1,8 @@
 import styled from "styled-components";
-import BookmarkIcon from "../BookmarkIcon/BookmarIcon";
+
 import TvShowMobile from "../TvShowMobile/TvShowMobile";
 
 const StyledShowsComponent = styled.div`
-  border: 2px solid yellow;
   height: 75vh;
   margin: 0;
   color: white;
@@ -14,8 +13,8 @@ const ShowContainer = ({ state }) => {
     <StyledShowsComponent>
       {state.map((show) => (
         <>
-          <BookmarkIcon id={show.id}></BookmarkIcon>
           <TvShowMobile
+            showId={show.id}
             key={show.name + show.id}
             name={show.name}
             posterURL={show.image.medium}

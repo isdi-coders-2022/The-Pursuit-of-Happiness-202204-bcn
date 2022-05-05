@@ -9,7 +9,6 @@ import { favLoader } from "../store/actions/showsActionCreator";
 import ShowsContext from "../store/context/ShowsContext";
 
 const StyledMainContainerComponent = styled.div`
-  border: 2px solid red;
   height: 100vh;
 `;
 
