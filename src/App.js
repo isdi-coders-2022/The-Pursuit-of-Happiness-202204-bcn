@@ -8,9 +8,9 @@ function App() {
     <>
       <ShowsProvider>
         <Routes>
-          <Route path="/" element={<Navigate to="/HomePage" />} />
-          <Route path="/HomePage" element={<HomePage />} />
-          <Route path="/FavsPage" element={<FavsPage />} />
+          <Route path="/" element={<Navigate to="/homepage" />} />
+          <Route path="/homepage" element={<HomePage />} />
+          <Route path="/favspage" element={<FavsPage />} />
         </Routes>
       </ShowsProvider>
     </>
