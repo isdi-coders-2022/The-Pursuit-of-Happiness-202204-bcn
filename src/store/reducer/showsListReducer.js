@@ -1,4 +1,8 @@
-import { loadFavShows, loadShows } from "../actions/showsActionTypes";
+import {
+  loadFavShows,
+  loadShows,
+  newShowToAdd,
+} from "../actions/showsActionTypes";
 
 const showListReducer = (shows, action) => {
   let newShow;
@@ -12,9 +16,11 @@ const showListReducer = (shows, action) => {
       newShow = [...action.payload];
 
       break;
-
+    case newShowToAdd:
+      newShow = [...shows, action.shows];
+      break;
     default:
-      newShow = { ...shows };
+      newShow = [...shows];
   }
 
   return newShow;

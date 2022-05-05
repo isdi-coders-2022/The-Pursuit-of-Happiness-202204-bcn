@@ -2,7 +2,7 @@ import { loadFavShows, loadShows } from "./showsActionTypes";
 
 export const showLoader = (shows) => ({
   type: loadShows,
-  payload: shows,
+  shows,
 });
 export const favLoader = (shows) => ({
   type: loadFavShows,
