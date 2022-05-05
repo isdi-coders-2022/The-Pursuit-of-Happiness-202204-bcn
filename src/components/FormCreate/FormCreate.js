@@ -24,7 +24,7 @@ const StyledFormCreateComponent = styled.div`
   .smallInput {
     display: flex;
     flex-direction: column;
-    width: 175px;
+    width: 180px;
     margin-right: 10px;
   }
   .submitButton {
@@ -46,7 +46,7 @@ const StyledFormCreateComponent = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 1px;
+
     justify-content: space-between;
   }
 `;
@@ -55,9 +55,9 @@ const FormCreate = () => {
   return (
     <StyledFormCreateComponent>
       <form>
-        <label for="name">Name:</label>
+        <label htmlFor="name">Name:</label>
         <input type="text" className="form-input" id="name" />
-        <label for="summary">Summary:</label>
+        <label htmlFor="summary">Summary:</label>
         <textarea className="form-input__summary" id="summary" />
         <label>Image:</label>
         <input
@@ -67,26 +67,26 @@ const FormCreate = () => {
         ></input>
         <div className="row-display">
           <div className="smallInput">
-            <label for="genre">Genre:</label>
+            <label htmlFor="genre">Genre:</label>
             <input type="text" className="form-input" id="genre" />
           </div>
           <div className="smallInput">
-            <label for="rating">Rating:</label>
+            <label htmlFor="rating">Rating:</label>
             <input type="number" className="form-input" id="rating" />
           </div>
         </div>
         <div className="row-display">
           <div className="smallInput">
-            <label for="year">Year:</label>
+            <label htmlFor="year">Year:</label>
             <input type="number" className="form-input" id="year" />
           </div>
           <div className="smallInput">
-            <label for="language">Language:</label>
+            <label htmlFor="language">Language:</label>
             <input type="text" className="form-input" id="language" />
           </div>
         </div>
         <div className="smallInput">
-          <label for="runtime">Runtime:</label>
+          <label htmlFor="runtime">Runtime:</label>
           <input type="number" className="form-input" id="runtime" />
         </div>
         <button type="submit" className="submitButton" value="Submit">
