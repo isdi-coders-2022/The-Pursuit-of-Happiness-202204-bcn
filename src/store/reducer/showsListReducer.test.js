@@ -1,4 +1,4 @@
-import { loadShows, newShow } from "../actions/showsActionTypes";
+import { loadShows, newShow, newShowToAdd } from "../actions/showsActionTypes";
 import showListReducer from "./showsListReducer";
 
 describe("Given the showListReducer", () => {
@@ -20,7 +20,7 @@ describe("Given the showListReducer", () => {
       ];
       const action = {
         type: loadShows,
-        thisShows,
+        shows: thisShows,
       };
 
       const expectedResult = [
@@ -103,7 +103,7 @@ describe("Given the showListReducer", () => {
       ];
       const newValues = { id: 4, name: "Lost" };
       const action = {
-        type: newShow,
+        type: newShowToAdd,
         shows: newValues,
       };
 

@@ -9,11 +9,11 @@ const showListReducer = (shows, action) => {
 
   switch (action.type) {
     case loadShows:
-      newShow = [...action.payload];
+      newShow = [...action.shows];
 
       break;
     case loadFavShows:
-      newShow = [...action.payload];
+      newShow = [...action.shows];
 
       break;
     case newShowToAdd:

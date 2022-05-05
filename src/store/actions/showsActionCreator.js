@@ -6,5 +6,5 @@ export const showLoader = (shows) => ({
 });
 export const favLoader = (shows) => ({
   type: loadFavShows,
-  payload: shows,
+  shows,
 });

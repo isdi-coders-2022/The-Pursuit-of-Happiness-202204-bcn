@@ -1,5 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
+import ShowsProvider from "../store/context/ShowsProvider";
 import FavsPage from "./FavsPage";
 
 describe("Given a FavsPage component", () => {
@@ -8,9 +9,11 @@ describe("Given a FavsPage component", () => {
       const expectedText = "WAS!";
 
       render(
-        <BrowserRouter>
-          <FavsPage />
-        </BrowserRouter>
+        <ShowsProvider>
+          <BrowserRouter>
+            <FavsPage />
+          </BrowserRouter>
+        </ShowsProvider>
       );
       const expectedRenderedHeading = screen.getByRole("heading", { level: 1 });
 
