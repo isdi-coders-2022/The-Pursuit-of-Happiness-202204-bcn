@@ -7,7 +7,7 @@ import ShowsContext from "../../store/context/ShowsContext";
 const StyledBookmarkComponent = styled.div`
   color: rgba(226, 182, 22, 1);
   .bookmarkIcon {
-    font-size: 30px;
+    font-size: 40px;
   }
 `;
 

@@ -4,9 +4,12 @@ const StyledFormCreateComponent = styled.div`
   color: white;
   align-items: center;
   font-size: 18px;
+  position: relative;
+  bottom: -240%;
   form {
     display: flex;
     flex-direction: column;
+
     input {
       border: 1px solid black;
     }
