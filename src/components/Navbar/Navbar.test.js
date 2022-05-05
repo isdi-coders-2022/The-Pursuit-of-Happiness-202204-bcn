@@ -1,5 +1,4 @@
 import { BrowserRouter } from "react-router-dom";
-import TestRenderer from "react-test-renderer";
 import Navbar from "./Navbar";
 import { render, screen } from "@testing-library/react";
 
@@ -19,13 +18,5 @@ describe("Given Navbar function", () => {
 
       expect(expectedNavbarText).toHaveLength(2);
     });
-  });
-  test("Then it should always match for this snapshot", () => {
-    const navbarReceived = TestRenderer.create(
-      <BrowserRouter>
-        <Navbar />
-      </BrowserRouter>
-    );
-    expect(navbarReceived).toMatchSnapshot();
   });
 });
