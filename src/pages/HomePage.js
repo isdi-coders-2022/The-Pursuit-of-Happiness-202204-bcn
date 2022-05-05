@@ -18,7 +18,11 @@ const HomePage = () => {
     (async () => {
       const response = await fetch("https://api.tvmaze.com/shows");
       const showsData = await response.json();
-      dispatch(showLoader(showsData));
+      let reducedData = [];
+      for (let i = 0; i <= 8; i++) {
+        reducedData.push(showsData[i]);
+      }
+      dispatch(showLoader(reducedData));
     })();
   }, [dispatch]);
 
