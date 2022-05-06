@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const StyledDropdownComponent = styled.div`
-  border: 1px solid grey;
+  border: 0;
   padding-left: 4px;
   padding-right: 4px;
   border-radius: 15px;
@@ -9,6 +9,7 @@ const StyledDropdownComponent = styled.div`
   .selectGenre {
     color: white;
     border: 0;
+    margin: 15px;
   }
 `;
 
