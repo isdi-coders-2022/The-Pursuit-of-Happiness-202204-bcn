@@ -16,12 +16,15 @@ const BookmarkIcon = (showId) => {
   const { state } = useContext(ShowsContext);
 
   const addToFavList = () => {
-    const showsToFilter = state.find((show) => show.id === showId.id);
+    const showsToFilter = state.find((show) => {
+      return show.id === showId.id;
+    });
     const showsFiltered = { ...showsToFilter };
 
-    async () => {
+    (async () => {
       const idToJson = JSON.stringify({ ...showsFiltered });
 
+      // eslint-disable-next-line no-unused-vars
       const response = await fetch("https://tvshows-api.onrender.com/tvshow/", {
         method: "POST",
         headers: {
@@ -29,7 +32,7 @@ const BookmarkIcon = (showId) => {
         },
         body: idToJson,
       });
-    ;
+    })();
   };
 
   return (
