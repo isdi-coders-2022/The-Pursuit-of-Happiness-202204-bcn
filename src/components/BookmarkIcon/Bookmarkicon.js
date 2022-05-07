@@ -12,7 +12,7 @@ const StyledBookmarkComponent = styled.div`
   }
 `;
 
-const BookmarkIcon = (showId, { action }) => {
+const BookmarkIcon = (showId) => {
   const { state } = useContext(ShowsContext);
 
   const addToFavList = () => {
@@ -39,7 +39,7 @@ const BookmarkIcon = (showId, { action }) => {
     <StyledBookmarkComponent>
       <FontAwesomeIcon
         data-testid="bookmarkTestId"
-        onClick={action}
+        onClick={addToFavList}
         id={showId}
         icon={faBookmark}
         className="bookmarkIcon"
