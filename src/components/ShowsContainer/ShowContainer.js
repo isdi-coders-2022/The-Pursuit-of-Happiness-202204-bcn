@@ -7,11 +7,8 @@ const StyledShowsComponent = styled.div`
   margin: 0;
   color: white;
 `;
-// const generateKey = (pre) => {
-//   return `${pre}_${new Date().getTime().toLocaleString()}`;
-// };
 
-const ShowContainer = ({ state, pageKey }) => {
+const ShowContainer = ({ state }) => {
   return (
     <StyledShowsComponent>
       {state.map((show) => (
