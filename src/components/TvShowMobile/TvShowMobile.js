@@ -9,7 +9,7 @@ const StyledShowComponent = styled.div`
   font-size: 20px;
 
   img {
-    border-radius: 45px;
+    border-radius: 44px;
     border: 2px solid;
   }
   form {
