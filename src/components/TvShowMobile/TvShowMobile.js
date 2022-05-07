@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import BookmarkIcon from "../BookmarkIcon/BookmarkIcon";
+import BookmarkIcon from "../BookmarkIcon/Bookmarkicon";
 import StarRating from "../StarRating/StarRating";
 
 const StyledShowComponent = styled.div`
