@@ -46,7 +46,8 @@ const useData = () => {
         body: idToJson,
       });
     })();
-
+ }, [dispatch]);
+ 
     const DeleteToApiFav = (showId) => {
     const showsToFilter = state.find((show) => {
       return show.id === showId.children[1];
