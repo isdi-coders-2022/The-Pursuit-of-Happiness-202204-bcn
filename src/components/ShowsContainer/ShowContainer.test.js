@@ -1,4 +1,5 @@
 import { render, screen } from "@testing-library/react";
+import { BrowserRouter } from "react-router-dom";
 import ShowsProvider from "../../store/context/ShowsProvider";
 import ShowContainer from "./ShowContainer";
 
@@ -65,11 +66,13 @@ describe("Given a component ShowContainer", () => {
       ];
       render(
         <ShowsProvider>
-          <ShowContainer
-            pageKey={"fav"}
-            state={arrayForTesting}
-            className="w-100"
-          />
+          <BrowserRouter>
+            <ShowContainer
+              pageKey={"fav"}
+              state={arrayForTesting}
+              className="w-100"
+            />
+          </BrowserRouter>
         </ShowsProvider>
       );
       const linkElement = screen.getByText("Under the Dome");
