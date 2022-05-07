@@ -38,7 +38,7 @@ const useData = () => {
     (async () => {
       const idToJson = JSON.stringify({ ...showsFiltered });
 
-      await fetch("https://tvshows-api.onrender.com/tvshow/", {
+      await fetch(privateApiUrl, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
