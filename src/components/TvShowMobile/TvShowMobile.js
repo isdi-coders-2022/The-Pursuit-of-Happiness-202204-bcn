@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import BookmarkIcon from "../BookmarkIcon/BookmarkIcon";
+import Bookmark from "../Bookmark/Bookmark";
 import StarRating from "../StarRating/StarRating";
 
 const StyledShowComponent = styled.div`
@@ -58,7 +58,7 @@ const StyledShowComponent = styled.div`
     color: rgba(226, 182, 22, 1);
     display: flex;
   }
-  .bookmarkfix {
+  .Bookmarkfix {
     background: none;
     right: 9%;
     position: absolute;
@@ -77,8 +77,8 @@ const TvShowMobile = ({ name, year, rating, genre, posterURL, showId }) => {
           </div>
           <div className="tvShowMobile__block2">
             <StarRating rating={rating}></StarRating>
-            <div className="bookmarkfix">
-              <BookmarkIcon>id={showId}</BookmarkIcon>
+            <div className="Bookmarkfix">
+              <Bookmark>id={showId}</Bookmark>
             </div>
           </div>
           <div className="tvShowMobile__block3"></div>
