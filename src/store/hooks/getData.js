@@ -1,5 +1,5 @@
 import { useCallback, useContext } from "react";
-import { showLoader } from "../actions/showsActionCreator";
+import { favLoader, showLoader } from "../actions/showsActionCreator";
 import ShowsContext from "../context/ShowsContext";
 
 const useData = () => {
@@ -21,7 +21,15 @@ const useData = () => {
     })();
   }, [dispatch]);
 
-  return { loadNewChars };
+  const loadFavShows = useCallback(() => {
+    (async () => {
+      const response = await fetch(privateApiUrl);
+      const favsData = await response.json();
+      dispatch(favLoader(favsData));
+    })();
+  }, []);
+
+  return { loadNewChars, loadFavShows };
 };
 
 export default useData;
