@@ -1,5 +1,4 @@
-import { useEffect } from "react";
-import { useContext } from "react";
+import { useEffect, useContext } from "react";
 import styled from "styled-components";
 import Footer from "../components/Footer/Footer";
 import FormCreate from "../components/FormCreate/FormCreate";

@@ -1,6 +1,6 @@
 import { useReducer } from "react";
 
-import showListReducer from "../reducer/showsListReducer";
+import showListReducer from "../reducer/showListReducer";
 import ShowsContext from "./ShowsContext";
 
 const ShowsProvider = ({ children }) => {
