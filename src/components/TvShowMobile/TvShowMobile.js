@@ -1,6 +1,6 @@
 import styled from "styled-components";
+import BookmarkIcon from "../BookmarkIcon/BookmarkIcon";
 import StarRating from "../StarRating/StarRating";
-import BookmarkIcon from "../BookmarkIcon/BookmarIcon";
 
 const StyledShowComponent = styled.div`
   color: white;
