@@ -1,7 +1,7 @@
 import { faBookmark } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styled from "styled-components";
-import useData from "../../store/hooks/getData";
+import useData from "../../store/hooks/useData";
 
 const StyledBookmarkComponent = styled.div`
   color: rgba(226, 182, 22, 1);
@@ -11,7 +11,7 @@ const StyledBookmarkComponent = styled.div`
   }
 `;
 
-const BookmarkIcon = (showId) => {
+const Bookmark = (showId) => {
   const { addToApiFav } = useData();
   return (
     <StyledBookmarkComponent>
@@ -28,4 +28,4 @@ const BookmarkIcon = (showId) => {
   );
 };
 
-export default BookmarkIcon;
+export default Bookmark;
