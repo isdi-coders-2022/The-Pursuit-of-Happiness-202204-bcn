@@ -5,6 +5,7 @@ import ShowContainer from "../components/ShowsContainer/ShowContainer";
 import { useContext, useEffect } from "react";
 import ShowsContext from "../store/context/ShowsContext";
 import { showLoader } from "../store/actions/showsActionCreator";
+import useData from "../store/hooks/getData";
 
 const StyledMainContainerComponent = styled.div`
   height: 100vh;
@@ -12,19 +13,12 @@ const StyledMainContainerComponent = styled.div`
 `;
 
 const HomePage = () => {
-  const { state, dispatch } = useContext(ShowsContext);
+  const { state } = useContext(ShowsContext);
+  const { loadNewChars } = useData();
 
   useEffect(() => {
-    (async () => {
-      const response = await fetch("https://api.tvmaze.com/shows");
-      const showsData = await response.json();
-      let reducedData = [];
-      for (let i = 0; i <= 8; i++) {
-        reducedData.push(showsData[i]);
-      }
-      dispatch(showLoader(reducedData));
-    })();
-  }, [dispatch]);
+    loadNewChars();
+  }, [loadNewChars]);
 
   return (
     <StyledMainContainerComponent className="container">
