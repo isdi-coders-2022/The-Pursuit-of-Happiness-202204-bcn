@@ -24,8 +24,7 @@ const BookmarkIcon = (showId) => {
     (async () => {
       const idToJson = JSON.stringify({ ...showsFiltered });
 
-      // eslint-disable-next-line no-unused-vars
-      const response = await fetch("https://tvshows-api.onrender.com/tvshow/", {
+      await fetch("https://tvshows-api.onrender.com/tvshow/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
