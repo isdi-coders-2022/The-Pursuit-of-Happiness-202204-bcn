@@ -31,7 +31,7 @@ const useData = () => {
 
   const addToApiFav = (showId) => {
     const showsToFilter = state.find((show) => {
-      return show.id === showId.id;
+      return show.id === showId.children[1];
     });
     const showsFiltered = { ...showsToFilter };
 

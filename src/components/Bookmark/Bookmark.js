@@ -13,7 +13,6 @@ const StyledBookmarkComponent = styled.div`
 
 const BookmarkIcon = (showId) => {
   const { addToApiFav } = useData();
-
   return (
     <StyledBookmarkComponent>
       <FontAwesomeIcon
