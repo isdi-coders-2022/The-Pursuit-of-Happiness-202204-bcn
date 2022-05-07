@@ -1,5 +1,7 @@
+import { useLocation } from "react-router-dom";
 import styled from "styled-components";
 import Bookmark from "../Bookmark/Bookmark";
+import DeleteButton from "../DeleteButton/DeleteButton";
 import StarRating from "../StarRating/StarRating";
 
 const StyledShowComponent = styled.div`
@@ -66,6 +68,8 @@ const StyledShowComponent = styled.div`
 `;
 
 const TvShowMobile = ({ name, year, rating, genre, posterURL, showId }) => {
+  const currentRoute = useLocation();
+
   return (
     <>
       <StyledShowComponent>
@@ -78,7 +82,11 @@ const TvShowMobile = ({ name, year, rating, genre, posterURL, showId }) => {
           <div className="tvShowMobile__block2">
             <StarRating rating={rating}></StarRating>
             <div className="Bookmarkfix">
-              <Bookmark>id={showId}</Bookmark>
+              {currentRoute.pathname === "/homepage" ? (
+                <Bookmark>id={showId}</Bookmark>
+              ) : (
+                <DeleteButton>id={showId}</DeleteButton>
+              )}
             </div>
           </div>
           <div className="tvShowMobile__block3"></div>
