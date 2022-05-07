@@ -1,6 +1,6 @@
 import styled from "styled-components";
+import BookmarkIcon from "../BookmarkIcon/BookmarkIcon";
 import StarRating from "../StarRating/StarRating";
-import BookmarkIcon from "../BookmarkIcon/BookmarIcon";
 
 const StyledShowComponent = styled.div`
   color: white;
@@ -9,7 +9,7 @@ const StyledShowComponent = styled.div`
   font-size: 20px;
 
   img {
-    border-radius: 45px;
+    border-radius: 44px;
     border: 2px solid;
   }
   form {
@@ -78,7 +78,7 @@ const TvShowMobile = ({ name, year, rating, genre, posterURL, showId }) => {
           <div className="tvShowMobile__block2">
             <StarRating rating={rating}></StarRating>
             <div className="bookmarkfix">
-              <BookmarkIcon id={showId}></BookmarkIcon>
+              <BookmarkIcon>id={showId}</BookmarkIcon>
             </div>
           </div>
           <div className="tvShowMobile__block3"></div>
