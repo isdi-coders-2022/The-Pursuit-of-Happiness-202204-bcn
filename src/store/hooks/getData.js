@@ -3,7 +3,7 @@ import { favLoader, showLoader } from "../actions/showsActionCreator";
 import ShowsContext from "../context/ShowsContext";
 
 const useData = () => {
-  const { dispatch } = useContext(ShowsContext);
+  const { state, dispatch } = useContext(ShowsContext);
 
   const publicApiUrl = "https://api.tvmaze.com/shows";
   const privateApiUrl = "https://tvshows-api.onrender.com/tvshow/";
@@ -27,9 +27,28 @@ const useData = () => {
       const favsData = await response.json();
       dispatch(favLoader(favsData));
     })();
-  }, []);
+  }, [dispatch]);
 
-  return { loadNewChars, loadFavShows };
+  const addToApiFav = (showId) => {
+    const showsToFilter = state.find((show) => {
+      return show.id === showId.id;
+    });
+    const showsFiltered = { ...showsToFilter };
+
+    (async () => {
+      const idToJson = JSON.stringify({ ...showsFiltered });
+
+      await fetch("https://tvshows-api.onrender.com/tvshow/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: idToJson,
+      });
+    })();
+  };
+
+  return { loadNewChars, loadFavShows, addToApiFav };
 };
 
 export default useData;
