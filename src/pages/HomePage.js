@@ -4,7 +4,7 @@ import Footer from "../components/Footer/Footer";
 import ShowContainer from "../components/ShowsContainer/ShowContainer";
 import { useContext, useEffect } from "react";
 import ShowsContext from "../store/context/ShowsContext";
-import useData from "../store/hooks/getData";
+import useData from "../store/hooks/useData";
 
 const StyledMainContainerComponent = styled.div`
   height: 100vh;

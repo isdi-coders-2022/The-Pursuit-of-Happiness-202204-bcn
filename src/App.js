@@ -1,7 +1,11 @@
-import { Navigate, Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes, useLocation } from "react-router-dom";
 import FavsPage from "./pages/FavsPage";
 import HomePage from "./pages/HomePage";
 import ShowsProvider from "./store/context/ShowsProvider";
+
+export const Location = () => {
+  const locationDisplay = useLocation();
+};
 
 function App() {
   return (
@@ -12,6 +16,7 @@ function App() {
           <Route path="/homepage" element={<HomePage />} />
           <Route path="/favspage" element={<FavsPage />} />
         </Routes>
+        <Location />
       </ShowsProvider>
     </>
   );

@@ -6,7 +6,7 @@ import FormCreate from "../components/FormCreate/FormCreate";
 import Header from "../components/Header/Header";
 import ShowContainer from "../components/ShowsContainer/ShowContainer";
 import ShowsContext from "../store/context/ShowsContext";
-import useData from "../store/hooks/getData";
+import useData from "../store/hooks/useData";
 
 const StyledMainContainerComponent = styled.div`
   height: 100vh;
