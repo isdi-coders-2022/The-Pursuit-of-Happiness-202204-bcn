@@ -23,6 +23,7 @@ const Bookmark = (showId) => {
         }}
         id={showId}
         icon={faBookmark}
+        data-testid="faBookmark"
         className="bookmarkIcon"
         swapOpacity
       />
