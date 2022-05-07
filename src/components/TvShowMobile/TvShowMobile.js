@@ -78,7 +78,7 @@ const TvShowMobile = ({ name, year, rating, genre, posterURL, showId }) => {
           <div className="tvShowMobile__block2">
             <StarRating rating={rating}></StarRating>
             <div className="bookmarkfix">
-              <BookmarkIcon id={showId}></BookmarkIcon>
+              <BookmarkIcon>id={showId}</BookmarkIcon>
             </div>
           </div>
           <div className="tvShowMobile__block3"></div>
