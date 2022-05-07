@@ -5,7 +5,6 @@ import Footer from "../components/Footer/Footer";
 import FormCreate from "../components/FormCreate/FormCreate";
 import Header from "../components/Header/Header";
 import ShowContainer from "../components/ShowsContainer/ShowContainer";
-import { favLoader } from "../store/actions/showsActionCreator";
 import ShowsContext from "../store/context/ShowsContext";
 import useData from "../store/hooks/getData";
 
