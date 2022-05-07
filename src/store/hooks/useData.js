@@ -46,6 +46,24 @@ const useData = () => {
         body: idToJson,
       });
     })();
+
+    const DeleteToApiFav = (showId) => {
+    const showsToFilter = state.find((show) => {
+      return show.id === showId.children[1];
+    });
+    const showsFiltered = { ...showsToFilter };
+
+    (async () => {
+      const idToJson = JSON.stringify({ ...showsFiltered });
+
+      await fetch(privateApiUrl, {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: idToJson,
+      });
+    })();
   };
 
   return { loadNewChars, loadFavShows, addToApiFav };
