@@ -2,10 +2,9 @@ import {
   addToFav,
   loadFavShows,
   loadShows,
-  newShow,
   newShowToAdd,
 } from "../actions/showsActionTypes";
-import showListReducer from "./showsListReducer";
+import showListReducer from "./showListReducer";
 
 describe("Given the showListReducer", () => {
   describe("When it receive a group of three shows and action is loadShows", () => {
