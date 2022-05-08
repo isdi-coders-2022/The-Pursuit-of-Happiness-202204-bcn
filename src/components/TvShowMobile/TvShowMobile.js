@@ -60,7 +60,7 @@ const StyledShowComponent = styled.div`
 
 const TvShowMobile = ({ name, year, rating, genre, posterURL, showId }) => {
   const currentRoute = useLocation();
-  const showIdToProcess = "/detailpage/" + showId;
+  const showIdToProcess = "/showdetailpage?id=" + showId;
 
   return (
     <>
