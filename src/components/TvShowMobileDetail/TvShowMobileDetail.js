@@ -63,6 +63,7 @@ const TvShowMobileDetail = ({ showId }) => {
     .replace("<b>", "")
     .replace("</b>", "")
     .replace("</p>", "");
+
   return (
     <>
       <StyledShow>
