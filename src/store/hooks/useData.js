@@ -64,7 +64,6 @@ const useData = () => {
         body: idToJson,
       });
     })();
-    // window.location.reload(false);
   };
 
   return { loadNewChars, loadFavShows, addToApiFav, deleteToApiFav };

@@ -3,11 +3,6 @@ import FavsPage from "./pages/FavsPage";
 import HomePage from "./pages/HomePage";
 import ShowsProvider from "./store/context/ShowsProvider";
 
-export const Location = () => {
-  // eslint-disable-next-line no-unused-vars
-  const locationDisplay = useLocation();
-};
-
 function App() {
   return (
     <>
@@ -17,7 +12,6 @@ function App() {
           <Route path="/homepage" element={<HomePage />} />
           <Route path="/favspage" element={<FavsPage />} />
         </Routes>
-        <Location />
       </ShowsProvider>
     </>
   );
