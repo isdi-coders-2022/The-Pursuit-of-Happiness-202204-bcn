@@ -2,7 +2,7 @@ import { rest } from "msw";
 
 export const handlers = [
   rest.get("https://api.tvmaze.com/shows", (_req, res, ctx) => {
-    return res(
+    res(
       ctx.status(200),
       ctx.json([
         {
@@ -65,7 +65,7 @@ export const handlers = [
     );
   }),
   rest.get("https://tvshows-api.onrender.com/tvshow/", (_req, res, ctx) => {
-    return res(
+    res(
       ctx.status(200),
       ctx.json([
         {
@@ -128,7 +128,7 @@ export const handlers = [
     );
   }),
   rest.post("https://tvshows-api.onrender.com/tvshow/", (_req, res, ctx) => {
-    return res(
+    res(
       ctx.status(200),
       ctx.json([
         {
