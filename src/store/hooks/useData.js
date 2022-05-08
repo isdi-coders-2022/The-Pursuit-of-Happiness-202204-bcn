@@ -63,6 +63,7 @@ const useData = () => {
         },
         body: idToJson,
       });
+      loadFavShows();
     })();
   };
 
