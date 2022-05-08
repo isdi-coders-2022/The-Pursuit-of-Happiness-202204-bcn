@@ -76,29 +76,33 @@ const TvShowMobile = ({ name, year, rating, genre, posterURL, showId }) => {
 
   return (
     <>
-      <StyledShowComponent>
-        <div className="tvShowMobil__container">
-          <div className="tvShowMobile__block1">
+      <StyledShowComponent className="container">
+        <div className="image row">
+          <div className="info col-8">
             <NavLink to={showIdToProcess}>
-              <img src={posterURL} alt={name} />
+              <img
+                max-width={210}
+                max-height={295}
+                src={posterURL}
+                alt={name}
+              />
             </NavLink>
-            <p className="title">{name}</p>
-            <p className="year">{year}</p>
+            <p className="info__genre">{genre}</p>
+            <p className="info__title">{name}</p>
+            <p className="info__year">{year}</p>
           </div>
-          <div className="tvShowMobile__block2">
-            <StarRating rating={rating}></StarRating>
-            <div className="Bookmarkfix">
+          <div className="icon col-2">
+            <div>
               {currentRoute.pathname === "/homepage" ? (
                 <Bookmark>id={showId}</Bookmark>
               ) : (
                 <DeleteButton>id={showId}</DeleteButton>
               )}
             </div>
+            <div className="icon__star">
+              <StarRating rating={rating}></StarRating>
+            </div>
           </div>
-          <div className="tvShowMobile__block3"></div>
-        </div>
-        <div className="tvShowMobile__block3">
-          <p className="genre">{genre}</p>
         </div>
       </StyledShowComponent>
     </>
