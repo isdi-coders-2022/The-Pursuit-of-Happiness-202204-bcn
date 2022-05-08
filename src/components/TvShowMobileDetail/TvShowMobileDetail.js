@@ -12,7 +12,7 @@ const StyledShow = styled.div`
   text-align: justify;
 
 .summary-title{
- width: 100%;
+  width: 100%;
   text-align: center;
   padding-top: 20px;
   font-size: 18px;
