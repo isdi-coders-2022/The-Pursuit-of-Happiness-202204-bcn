@@ -1,9 +1,9 @@
 import { render, screen } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
 import ShowsProvider from "../../store/context/ShowsProvider";
-import ShowContainer from "./ShowContainer";
+import ShowsContainer from "./ShowsContainer";
 
-describe("Given a component ShowContainer", () => {
+describe("Given a component ShowsContainer", () => {
   describe("When it receives an array with one array value with name=Under the Dome", () => {
     test("Then it shoul render an element with text 'Under the Dome'", () => {
       const arrayForTesting = [
@@ -67,7 +67,7 @@ describe("Given a component ShowContainer", () => {
       render(
         <ShowsProvider>
           <BrowserRouter>
-            <ShowContainer
+            <ShowsContainer
               pageKey={"fav"}
               state={arrayForTesting}
               className="w-100"

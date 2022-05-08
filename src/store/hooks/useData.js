@@ -1,10 +1,15 @@
 import { useCallback, useContext } from "react";
-import { favLoader, showLoader } from "../actions/showsActionCreator";
+import {
+  favLoader,
+  showLoader,
+  showLoaderById,
+} from "../actions/showsActionCreator";
 import ShowsContext from "../context/ShowsContext";
 
 const useData = () => {
   const publicApiUrl = "https://api.tvmaze.com/shows";
   const privateApiUrl = "https://tvshows-api.onrender.com/tvshow/";
+  const publicApiUrlById = "https://tvshows-api.onrender.com/shows/";
   const { state, dispatch } = useContext(ShowsContext);
 
   const loadNewChars = useCallback(async () => {
@@ -18,6 +23,22 @@ const useData = () => {
     dispatch(showLoader(reducedData));
     return showsData;
   }, [dispatch]);
+
+  const loadShowById = useCallback(
+    (showId) => {
+      (async () => {
+        const response = await fetch(publicApiUrlById + { showId });
+        const showsData = await response.json();
+
+        let reducedData = [];
+        for (let i = 0; i <= 8; i++) {
+          reducedData.push(showsData[i]);
+        }
+        dispatch(showLoaderById(reducedData));
+      })();
+    },
+    [dispatch]
+  );
 
   const loadFavShows = useCallback(async () => {
     const response = await fetch(privateApiUrl);
@@ -41,9 +62,8 @@ const useData = () => {
       },
       body: idToJson,
     });
-    const showObjectResponse = await response.json();
 
-    return showObjectResponse;
+    return response.json();
   };
 
   const deleteToApiFav = async (showId) => {
@@ -63,10 +83,16 @@ const useData = () => {
     });
 
     loadFavShows();
-    return await response.json();
+    return response.json();
   };
 
-  return { loadNewChars, loadFavShows, addToApiFav, deleteToApiFav };
+  return {
+    loadNewChars,
+    loadFavShows,
+    addToApiFav,
+    deleteToApiFav,
+    loadShowById,
+  };
 };
 
 export default useData;

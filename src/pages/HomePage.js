@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
-import ShowContainer from "../components/ShowsContainer/ShowContainer";
+import ShowsContainer from "../components/ShowsContainer/ShowsContainer";
 import { useContext, useEffect } from "react";
 import ShowsContext from "../store/context/ShowsContext";
 import useData from "../store/hooks/useData";
@@ -27,7 +27,7 @@ const HomePage = () => {
     <StyledMainContainerComponent className="container">
       <Header />
       <div className="row">
-        <ShowContainer pageKey={"home"} state={state} className="w-100" />
+        <ShowsContainer pageKey={"home"} state={state} className="w-100" />
       </div>
       <Footer />
     </StyledMainContainerComponent>

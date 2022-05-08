@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Bookmark from "../Bookmark/Bookmark";
 import DeleteButton from "../DeleteButton/DeleteButton";
 import StarRating from "../StarRating/StarRating";
+import { NavLink } from "react-router-dom";
 
 const StyledShowComponent = styled.div`
   display: flex;
@@ -14,7 +15,7 @@ const StyledShowComponent = styled.div`
   img {
     max-width: 210px;
     max-height: 295px;
-    border-radius: 16px;
+    border-radius: 15px;
     border: 2px solid;
   }
 
@@ -59,13 +60,16 @@ const StyledShowComponent = styled.div`
 
 const TvShowMobile = ({ name, year, rating, genre, posterURL, showId }) => {
   const currentRoute = useLocation();
+  const showIdToProcess = "/detailpage/" + showId;
 
   return (
     <>
       <StyledShowComponent className="container">
         <div className="image row">
           <div className="info col-8">
-            <img width={206} height={291} src={posterURL} alt={name} />
+            <NavLink to={showIdToProcess}>
+              <img width={206} height={291} src={posterURL} alt={name} />
+            </NavLink>
             <p className="info__genre">{genre}</p>
             <p className="info__title">{name}</p>
             <p className="info__year">{year}</p>
