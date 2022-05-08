@@ -11,9 +11,9 @@ describe("Given a Bookmark component", () => {
         </ShowsProvider>
       );
 
-      const deleteButtonExpected = screen.getByTestId("faBookmark");
+      const addIconExpected = screen.getByTestId("faBookmark");
 
-      expect(deleteButtonExpected).toBeInTheDocument();
+      expect(addIconExpected).toBeInTheDocument();
     });
   });
 });
