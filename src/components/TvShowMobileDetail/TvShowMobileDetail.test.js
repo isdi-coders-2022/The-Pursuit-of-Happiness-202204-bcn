@@ -18,6 +18,7 @@ describe("Given a component TvShowMobileDetail", () => {
               rating="10.0"
               year="2020"
               genre="Acción"
+              summary="texto de summary"
             />
           </Router>
         </ShowsProvider>
