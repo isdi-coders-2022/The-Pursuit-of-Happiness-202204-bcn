@@ -4,7 +4,7 @@ import Bookmark from "../Bookmark/Bookmark";
 import DeleteButton from "../DeleteButton/DeleteButton";
 import StarRating from "../StarRating/StarRating";
 
-const StyledShowComponent = styled.div`
+const StyledShowComponent = styled.ul`
   display: flex;
   color: white;
   margin-top: 30px;
@@ -63,9 +63,9 @@ const TvShowMobile = ({ name, year, rating, genre, posterURL, showId }) => {
   return (
     <>
       <StyledShowComponent className="container">
-        <div className="image row">
+        <li className="image row">
           <div className="info col-8">
-            <img width={206} height={291} src={posterURL} alt={name} />
+            <img max-width={210} max-height={295} src={posterURL} alt={name} />
             <p className="info__genre">{genre}</p>
             <p className="info__title">{name}</p>
             <p className="info__year">{year}</p>
@@ -82,7 +82,7 @@ const TvShowMobile = ({ name, year, rating, genre, posterURL, showId }) => {
               <StarRating rating={rating}></StarRating>
             </div>
           </div>
-        </div>
+        </li>
       </StyledShowComponent>
     </>
   );
