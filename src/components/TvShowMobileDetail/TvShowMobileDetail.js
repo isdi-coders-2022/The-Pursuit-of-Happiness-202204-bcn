@@ -11,16 +11,16 @@ const StyledShow = styled.div`
   padding: 0;
   text-align: justify;
 
-.summary-title{
-  width: 100%;
-  text-align: center;
-  padding-top: 20px;
-  font-size: 18px;
-}
+  .summary-title {
+    width: 100%;
+    text-align: center;
+    padding-top: 20px;
+    font-size: 18px;
+  }
 
   .icon__star {
     margin: auto;
-      top: 26px;
+    top: 26px;
     position: relative;
   }
   .detail-container {
@@ -36,16 +36,16 @@ const StyledShow = styled.div`
   .detail-info {
     display: flex;
     flex-direction: column;
-        position: relative;
+    position: relative;
     left: 136px;
-}
   }
+
   .show-detail {
-       position: relative;
+    position: relative;
     left: -229px;
     top: -92px;
   }
-  img{
+  img {
     border-radius: 45px;
     border: solid 2px white;
   }
