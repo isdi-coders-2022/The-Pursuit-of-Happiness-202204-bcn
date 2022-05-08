@@ -15,7 +15,7 @@ const StyledShowComponent = styled.div`
   img {
     max-width: 210px;
     max-height: 295px;
-    border-radius: 16px;
+    border-radius: 15px;
     border: 2px solid;
   }
 
