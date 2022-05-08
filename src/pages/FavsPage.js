@@ -9,6 +9,7 @@ import useData from "../store/hooks/useData";
 
 const StyledMainContainerComponent = styled.div`
   height: 100vh;
+  background-color: #242a32;
 `;
 
 const FavsPage = () => {

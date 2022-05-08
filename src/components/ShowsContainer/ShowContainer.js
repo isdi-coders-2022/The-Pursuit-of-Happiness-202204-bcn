@@ -6,6 +6,7 @@ const StyledShowsComponent = styled.div`
   height: 75vh;
   margin: 0;
   color: white;
+  background-color: #242a32;
 `;
 
 const ShowContainer = ({ state }) => {

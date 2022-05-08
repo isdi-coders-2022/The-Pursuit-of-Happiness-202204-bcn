@@ -9,7 +9,7 @@ const StyledShowComponent = styled.div`
   display: flex;
   margin-top: 20px;
   font-size: 20px;
-
+  background-color: #242a32;
   img {
     border-radius: 44px;
     border: 2px solid;
@@ -37,7 +37,6 @@ const StyledShowComponent = styled.div`
   .tvShowMobil__container {
     display: flex;
     flex-direction: row;
-    width: 210px;
   }
   .tvShowMobile__block1 {
     align-items: flex-end;
@@ -52,7 +51,7 @@ const StyledShowComponent = styled.div`
   }
   .tvShowMobile__block3 {
     margin-top: 235px;
-    margin-left: 89px;
+
     align-items: flex-start;
   }
   .genre {
@@ -60,10 +59,13 @@ const StyledShowComponent = styled.div`
     color: rgba(226, 182, 22, 1);
     display: flex;
   }
-  .Bookmarkfix {
+  .Bookmarkfix div {
     background: none;
-    right: 9%;
-    position: absolute;
+    top: -9px;
+    right: 100px;
+    position: relative;
+
+    opacity: 70%;
   }
 `;
 

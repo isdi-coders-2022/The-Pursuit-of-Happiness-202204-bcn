@@ -49,7 +49,7 @@ const StyledFormCreateComponent = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;
-
+    background-color: #242a32;
     justify-content: space-between;
   }
 `;

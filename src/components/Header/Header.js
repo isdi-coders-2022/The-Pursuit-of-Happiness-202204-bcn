@@ -8,6 +8,7 @@ const StyledHeaderComponent = styled.div`
   color: white;
   height: 15vh;
   align-items: baseline;
+  background-color: #242a32;
   .logoSign {
     color: rgba(226, 182, 22, 1);
   }

@@ -9,6 +9,10 @@ import useData from "../store/hooks/useData";
 const StyledMainContainerComponent = styled.div`
   height: 100vh;
   margin: 0;
+  background-color: #242a32;
+  div {
+    background-color: #242a32;
+  }
 `;
 
 const HomePage = () => {

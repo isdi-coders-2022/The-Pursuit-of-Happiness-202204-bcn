@@ -47,8 +47,27 @@ const useData = () => {
       });
     })();
   };
+  const deleteToApiFav = (showId) => {
+    const showsToFilter = state.find((show) => {
+      return show.id === showId.children[1];
+    });
+    const showsFiltered = { ...showsToFilter };
 
-  return { loadNewChars, loadFavShows, addToApiFav };
+    (async () => {
+      const idToJson = JSON.stringify({ ...showsFiltered });
+
+      await fetch(privateApiUrl + "/" + showId.children[1], {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: idToJson,
+      });
+    })();
+    // window.location.reload(false);
+  };
+
+  return { loadNewChars, loadFavShows, addToApiFav, deleteToApiFav };
 };
 
 export default useData;
