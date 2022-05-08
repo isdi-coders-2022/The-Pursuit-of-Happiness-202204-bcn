@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Bookmark from "../Bookmark/Bookmark";
 import DeleteButton from "../DeleteButton/DeleteButton";
 import StarRating from "../StarRating/StarRating";
+import { NavLink } from "react-router-dom";
 
 const StyledShowComponent = styled.div`
   color: white;
@@ -71,13 +72,16 @@ const StyledShowComponent = styled.div`
 
 const TvShowMobile = ({ name, year, rating, genre, posterURL, showId }) => {
   const currentRoute = useLocation();
+  const showIdToProcess = "/detailpage/" + showId;
 
   return (
     <>
       <StyledShowComponent>
         <div className="tvShowMobil__container">
           <div className="tvShowMobile__block1">
-            <img src={posterURL} alt={name} />
+            <NavLink to={showIdToProcess}>
+              <img src={posterURL} alt={name} />
+            </NavLink>
             <p className="title">{name}</p>
             <p className="year">{year}</p>
           </div>
