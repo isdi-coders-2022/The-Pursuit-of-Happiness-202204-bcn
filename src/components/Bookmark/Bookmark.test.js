@@ -4,16 +4,16 @@ import Bookmark from "./Bookmark";
 
 describe("Given a Bookmark component", () => {
   describe("When its called", () => {
-    test("Then it should render an icon with id 'FaxMarkXCircle'", () => {
+    test("Then it should render an icon with id 'faBookmark'", () => {
       render(
         <ShowsProvider>
           <Bookmark></Bookmark>
         </ShowsProvider>
       );
 
-      const deleteButtonExpected = screen.getByTestId("faBookmark");
+      const addIconExpected = screen.getByTestId("faBookmark");
 
-      expect(deleteButtonExpected).toBeInTheDocument();
+      expect(addIconExpected).toBeInTheDocument();
     });
   });
 });
