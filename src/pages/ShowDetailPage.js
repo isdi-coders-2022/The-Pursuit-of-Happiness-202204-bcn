@@ -1,20 +1,21 @@
-import useData from "../store/hooks/useData";
-import { useEffect, useContext } from "react";
+import { useContext } from "react";
 import ShowsContext from "../store/context/ShowsContext";
-import ShowsContainer from "../components/ShowsContainer/ShowsContainer";
 import TvShowMobileDetail from "../components/TvShowMobileDetail/TvShowMobileDetail";
+import { useSearchParams } from "react-router-dom";
 
 const ShowDetailPage = () => {
   const { state } = useContext(ShowsContext);
-  const { loadShowById } = useData();
-
-  useEffect(() => {
-    loadShowById();
-  }, [loadShowById]);
+  const [searchParams] = useSearchParams();
+  const paramsShowId = searchParams.get("id");
 
   return (
     <>
-      <TvShowMobileDetail pageKey={"detail"} state={state} className="w-100" />
+      <TvShowMobileDetail
+        showId={paramsShowId}
+        pageKey={"detail"}
+        state={state}
+        className="w-100"
+      />
     </>
   );
 };
