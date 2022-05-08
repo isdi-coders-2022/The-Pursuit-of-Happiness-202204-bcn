@@ -3,7 +3,6 @@ import {
   loadFavShows,
   loadShows,
   newShowToAdd,
-  deleteFav,
 } from "../actions/showsActionTypes";
 
 const showListReducer = (shows, action) => {
@@ -21,9 +20,6 @@ const showListReducer = (shows, action) => {
       break;
     case addToFav:
       newShow = [...shows, action.shows];
-      break;
-    case deleteFav:
-      newShow = shows.splice(shows.indexOf(action.shows), 2);
       break;
     default:
       newShow = [...shows];
