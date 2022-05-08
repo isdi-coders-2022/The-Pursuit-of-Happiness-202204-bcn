@@ -6,6 +6,8 @@ import useData from "../../store/hooks/useData";
 
 const StyledBookmarkComponent = styled.div`
   color: rgba(226, 182, 22, 1);
+  background: none;
+
   .bookmarkIcon {
     font-size: 40px;
     background: none;

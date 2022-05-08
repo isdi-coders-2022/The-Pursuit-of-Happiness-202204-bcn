@@ -23,8 +23,9 @@ const showListReducer = (shows, action) => {
       newShow = [...shows, action.shows];
       break;
     case deleteFav:
+      debugger;
+      newShow = shows.splice(shows.indexOf(action.shows), 2);
       break;
-
     default:
       newShow = [...shows];
   }

@@ -5,6 +5,7 @@ import ArrowButtonRight from "../ArrowButtonRight/ArrowButtonRight";
 const StyledFooterComponent = styled.div`
   height: 10vh;
   visibility: hidden;
+  background-color: #242a32;
 `;
 
 const Footer = () => {

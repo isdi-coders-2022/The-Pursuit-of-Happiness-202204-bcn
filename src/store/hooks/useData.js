@@ -46,9 +46,8 @@ const useData = () => {
         body: idToJson,
       });
     })();
- }, [dispatch]);
- 
-    const DeleteToApiFav = (showId) => {
+  };
+  const deleteToApiFav = (showId) => {
     const showsToFilter = state.find((show) => {
       return show.id === showId.children[1];
     });
@@ -57,7 +56,7 @@ const useData = () => {
     (async () => {
       const idToJson = JSON.stringify({ ...showsFiltered });
 
-      await fetch(privateApiUrl, {
+      await fetch(privateApiUrl + "/" + showId.children[1], {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
@@ -65,9 +64,10 @@ const useData = () => {
         body: idToJson,
       });
     })();
+    // window.location.reload(false);
   };
 
-  return { loadNewChars, loadFavShows, addToApiFav };
+  return { loadNewChars, loadFavShows, addToApiFav, deleteToApiFav };
 };
 
 export default useData;
