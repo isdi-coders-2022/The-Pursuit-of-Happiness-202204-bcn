@@ -26,42 +26,44 @@ const useData = () => {
     return favsData;
   }, [dispatch]);
 
-  const addToApiFav = (showId) => {
+  const addToApiFav = async (showId) => {
     const showsToFilter = state.find((show) => {
       return show.id === showId.children[1];
     });
     const showsFiltered = { ...showsToFilter };
 
-    (async () => {
-      const idToJson = JSON.stringify({ ...showsFiltered });
+    const idToJson = JSON.stringify({ ...showsFiltered });
 
-      await fetch(privateApiUrl, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: idToJson,
-      });
-    })();
+    const response = await fetch(privateApiUrl, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: idToJson,
+    });
+    const showObjectResponse = await response.json();
+
+    return showObjectResponse;
   };
-  const deleteToApiFav = (showId) => {
+
+  const deleteToApiFav = async (showId) => {
     const showsToFilter = state.find((show) => {
       return show.id === showId.children[1];
     });
     const showsFiltered = { ...showsToFilter };
 
-    (async () => {
-      const idToJson = JSON.stringify({ ...showsFiltered });
+    const idToJson = JSON.stringify({ ...showsFiltered });
 
-      await fetch(privateApiUrl + "/" + showId.children[1], {
-        method: "DELETE",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: idToJson,
-      });
-      loadFavShows();
-    })();
+    const response = await fetch(privateApiUrl + "/" + showId.children[1], {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: idToJson,
+    });
+
+    loadFavShows();
+    return await response.json();
   };
 
   return { loadNewChars, loadFavShows, addToApiFav, deleteToApiFav };
