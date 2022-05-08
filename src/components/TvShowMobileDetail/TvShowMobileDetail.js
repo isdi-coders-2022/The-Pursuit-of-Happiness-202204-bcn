@@ -12,6 +12,7 @@ const TvShowMobileDetail = ({ showId }) => {
     <>
       <p data-testid="tvShowDetail" className="title">
         {showId}
+        {showToShow}
       </p>
       <p className="year">{showId}</p>
     </>

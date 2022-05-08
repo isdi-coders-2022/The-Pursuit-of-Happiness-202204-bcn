@@ -1,15 +1,11 @@
 import { useCallback, useContext } from "react";
-import {
-  favLoader,
-  showLoader,
-  showLoaderById,
-} from "../actions/showsActionCreator";
+import { favLoader, showLoader } from "../actions/showsActionCreator";
 import ShowsContext from "../context/ShowsContext";
 
 const useData = () => {
   const publicApiUrl = "https://api.tvmaze.com/shows";
   const privateApiUrl = "https://tvshows-api.onrender.com/tvshow/";
-  const publicApiUrlById = "https://api.tvmaze.com/shows/";
+
   const { state, dispatch } = useContext(ShowsContext);
 
   const loadNewChars = useCallback(async () => {
