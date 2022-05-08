@@ -1,4 +1,9 @@
-import { addToFav, loadFavShows, loadShows } from "./showsActionTypes";
+import {
+  addToFav,
+  loadFavShows,
+  loadShowById,
+  loadShows,
+} from "./showsActionTypes";
 
 export const showLoader = (shows) => ({
   type: loadShows,
@@ -10,5 +15,10 @@ export const favLoader = (shows) => ({
 });
 export const favAdder = (shows) => ({
   type: addToFav,
+  shows,
+});
+
+export const showLoaderById = (shows) => ({
+  type: loadShowById,
   shows,
 });

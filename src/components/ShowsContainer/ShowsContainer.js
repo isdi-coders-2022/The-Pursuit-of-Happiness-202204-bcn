@@ -9,7 +9,7 @@ const StyledShowsComponent = styled.div`
   background-color: #242a32;
 `;
 
-const ShowContainer = ({ state }) => {
+const ShowsContainer = ({ state }) => {
   return (
     <StyledShowsComponent>
       {state.map((show) => (
@@ -29,4 +29,4 @@ const ShowContainer = ({ state }) => {
   );
 };
 
-export default ShowContainer;
+export default ShowsContainer;
