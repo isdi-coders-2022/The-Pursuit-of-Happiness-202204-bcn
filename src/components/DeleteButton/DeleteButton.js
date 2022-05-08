@@ -66,6 +66,7 @@ const DeleteButton = (showId) => {
           deleteToApiFav(showId);
         }}
         id={showId}
+        data-testid="FaxMarkXCircle"
         icon={faXmarkCircle}
         className="deleteIcon"
       />
