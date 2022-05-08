@@ -6,67 +6,55 @@ import StarRating from "../StarRating/StarRating";
 import { NavLink } from "react-router-dom";
 
 const StyledShowComponent = styled.div`
-  color: white;
   display: flex;
-  margin-top: 20px;
+  color: white;
+  margin-top: 30px;
   font-size: 20px;
-  background-color: #242a32;
+  padding: 0;
+
   img {
-    border-radius: 44px;
+    max-width: 210px;
+    max-height: 295px;
+    border-radius: 16px;
     border: 2px solid;
   }
-  form {
-    left: 50%;
-    position: absolute;
-    top: 10%;
-  }
-  .title {
-    margin-top: 10px;
-    font-size: 18px;
-    font-weight: 600;
 
-    width: 100%;
-    left: 20%;
-    position: relative;
-  }
-  .year {
-    font-size: 12px;
-    position: relative;
-    right: -159%;
-    top: -18%;
-  }
-  .tvShowMobil__container {
+  .info {
     display: flex;
-    flex-direction: row;
-  }
-  .tvShowMobile__block1 {
-    align-items: flex-end;
-    width: 165px;
-    margin-right: 60px;
-    width: 177px;
-  }
-  .tvShowMobile__block2 {
-    width: 110px;
-    display: flex;
-    font-size: 16px;
-  }
-  .tvShowMobile__block3 {
-    margin-top: 235px;
+    align-content: center;
+    flex-direction: column;
+    margin-left: 25px;
 
-    align-items: flex-start;
+    &__title {
+      font-size: 26px;
+      padding: 0;
+      margin: 0;
+    }
+    &__year {
+      padding: 0;
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+    &__genre {
+      margin-bottom: -4px;
+      align-self: center;
+      color: rgba(226, 182, 22, 1);
+      padding: 4px;
+    }
   }
-  .genre {
-    font-size: 18px;
-    color: rgba(226, 182, 22, 1);
+  .icon {
+    margin-left: 30px;
     display: flex;
-  }
-  .Bookmarkfix div {
-    background: none;
-    top: -9px;
-    right: 100px;
-    position: relative;
+    flex-direction: column;
+    align-items: center;
 
-    opacity: 70%;
+    &__star {
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-top: 60px;
+    }
   }
 `;
 
@@ -76,29 +64,30 @@ const TvShowMobile = ({ name, year, rating, genre, posterURL, showId }) => {
 
   return (
     <>
-      <StyledShowComponent>
-        <div className="tvShowMobil__container">
-          <div className="tvShowMobile__block1">
+
+      <StyledShowComponent className="container">
+        <div className="image row">
+          <div className="info col-8">
             <NavLink to={showIdToProcess}>
-              <img src={posterURL} alt={name} />
-            </NavLink>
-            <p className="title">{name}</p>
-            <p className="year">{year}</p>
+            <img width={206} height={291} src={posterURL} alt={name} />
+               </NavLink>
+            <p className="info__genre">{genre}</p>
+            <p className="info__title">{name}</p>
+            <p className="info__year">{year}</p>
+
           </div>
-          <div className="tvShowMobile__block2">
-            <StarRating rating={rating}></StarRating>
-            <div className="Bookmarkfix">
+          <div className="icon col-2">
+            <div>
               {currentRoute.pathname === "/homepage" ? (
                 <Bookmark>id={showId}</Bookmark>
               ) : (
                 <DeleteButton>id={showId}</DeleteButton>
               )}
             </div>
+            <div className="icon__star">
+              <StarRating rating={rating}></StarRating>
+            </div>
           </div>
-          <div className="tvShowMobile__block3"></div>
-        </div>
-        <div className="tvShowMobile__block3">
-          <p className="genre">{genre}</p>
         </div>
       </StyledShowComponent>
     </>
