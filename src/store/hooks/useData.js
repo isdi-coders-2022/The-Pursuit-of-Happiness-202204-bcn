@@ -62,9 +62,8 @@ const useData = () => {
       },
       body: idToJson,
     });
-    const showObjectResponse = await response.json();
 
-    return showObjectResponse;
+    return response.json();
   };
 
   const deleteToApiFav = async (showId) => {
@@ -84,7 +83,7 @@ const useData = () => {
     });
 
     loadFavShows();
-    return await response.json();
+    return response.json();
   };
 
   return {
