@@ -58,7 +58,11 @@ const TvShowMobileDetail = ({ showId }) => {
     return show.id.toString() === showId;
   });
 
-  const summaryFormatted = showToShow.summary.replace("<p>", "");
+  const summaryFormatted = showToShow.summary
+    .replace("<p>", "")
+    .replace("<b>", "")
+    .replace("</b>", "")
+    .replace("</p>");
 
   return (
     <>
