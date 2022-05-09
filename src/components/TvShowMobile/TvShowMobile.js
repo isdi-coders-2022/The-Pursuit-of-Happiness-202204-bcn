@@ -68,7 +68,7 @@ const TvShowMobile = ({ name, year, rating, genre, posterURL, showId }) => {
         <div className="image row">
           <div className="info col-8">
             <NavLink to={showIdToProcess}>
-              <img width={206} height={291} src={posterURL} alt={name} />
+              <img width={210} height={295} src={posterURL} alt={name} />
             </NavLink>
             <p className="info__genre">{genre}</p>
             <p className="info__title">{name}</p>
